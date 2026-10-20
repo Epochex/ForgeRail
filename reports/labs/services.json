@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "network": "none; HTTP queried via docker exec loopback",
+  "targets": [
+    {
+      "role": "core",
+      "image_id": "sha256:f9a6bb9d700f05510f67d34d3851c29333203b9aeff27ad075a6bd71f0fb4733",
+      "http_runtime": {
+        "role": "core",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494903.8711991
+      }
+    },
+    {
+      "role": "edge",
+      "image_id": "sha256:43111743fa3a5e96bc7ff328010a4f02f5c1ed1768db0cbb38332f2b12e65c0f",
+      "http_runtime": {
+        "role": "edge",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494905.381919
+      }
+    },
+    {
+      "role": "collector",
+      "image_id": "sha256:0c62a12bbcb5190e5e47c6bd05bdfa80330cf6923a07c9d1be055d4f417c0547",
+      "http_runtime": {
+        "role": "collector",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494906.7004511
+      }
+    },
+    {
+      "role": "processor",
+      "image_id": "sha256:2b7d20ca9a3afff7e99c4fd2171cf55c16d2f79ad68368a587e0157d329fe3d3",
+      "http_runtime": {
+        "role": "processor",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494907.9437492
+      }
+    },
+    {
+      "role": "gateway",
+      "image_id": "sha256:a67cccfa48a94bdc2fb6fc360b7a0a073e8d3d9ebf05e68c8877e8b6556eb9dd",
+      "http_runtime": {
+        "role": "gateway",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494909.2460754
+      }
+    },
+    {
+      "role": "scheduler",
+      "image_id": "sha256:e6a55797e2fb1b1295d8a49aff9ec80cb7e44651a454fb4d7c3ec924ef6506d8",
+      "http_runtime": {
+        "role": "scheduler",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494910.4844356
+      }
+    },
+    {
+      "role": "exporter",
+      "image_id": "sha256:60b6235de5450fc05f077b308de8187655df21ed5dc30fb824f8bb265586a8b5",
+      "http_runtime": {
+        "role": "exporter",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494911.6475854
+      }
+    },
+    {
+      "role": "observer",
+      "image_id": "sha256:344a8f1d9c3c56a6d42fbd5b7a7b98f53d38dae178c15aec5c54770418a784e5",
+      "http_runtime": {
+        "role": "observer",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494912.9608839
+      }
+    }
+  ]
+}

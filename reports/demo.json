@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "adapter": "lab",
+  "description": "actual HTTP, Git worktrees and two node processes; not a Unity build",
+  "jobs": [
+    {
+      "idem": "branch-0",
+      "request": {
+        "adapter": "lab",
+        "branch": "main",
+        "build_script_version": "1",
+        "commit_sha": "a18edd05af6b5939415f7e3be743a7aa38f776f1",
+        "configuration": "Release",
+        "input_digest": "d6cfc0c632ef1a91df114fb8f7cd33ad009a049a299f8a3b9ed5c52c1589e13e",
+        "project_id": "demo",
+        "target": "lab"
+      },
+      "state": "succeeded",
+      "attempt": 1,
+      "worker": "node-1",
+      "token": null,
+      "expiry": null,
+      "detail": "",
+      "created": 1792495827.4269135,
+      "job_id": "20261020T113027Z-a18edd05-286cc521c6",
+      "artifact_id": "artifact-d2c55dbb29e24e72b4d815e85b412fd5"
+    },
+    {
+      "idem": "branch-1",
+      "request": {
+        "adapter": "lab",
+        "branch": "feature/resource-change",
+        "build_script_version": "1",
+        "commit_sha": "d6c822137be2b232216c4722d464aa03297e3749",
+        "configuration": "Release",
+        "input_digest": "fe19890dca968b0a8ec2d48ed4475d26040e11b0ff031d5a719ae48a00aac973",
+        "project_id": "demo",
+        "target": "lab"
+      },
+      "state": "succeeded",
+      "attempt": 1,
+      "worker": "node-0",
+      "token": null,
+      "expiry": null,
+      "detail": "",
+      "created": 1792495827.4672368,
+      "job_id": "20261020T113027Z-d6c82213-9ebd6bc387",
+      "artifact_id": "artifact-d3ff12cb6d3649f48fcba34b2471b410"
+    }
+  ],
+  "stale_report_rejected": true,
+  "artifact_tamper_rejected": true,
+  "audit_chain_valid": true,
+  "evidence_dir": "<workspace>\\runtime\\demo\\run-3e83071ed4"
+}

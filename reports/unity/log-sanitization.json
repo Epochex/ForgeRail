@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "policy": "Retain build/import/compiler/runtime evidence; omit licensing, tokens and machine/session/network identifiers from committed logs; raw copies use ignored secrets-* names",
+  "files": [
+    {
+      "path": "reports/unity/cache-recovery/editor.log",
+      "redacted_lines": 107,
+      "raw_local_ignored_path": "reports/unity/cache-recovery/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/cache-recovery/player.log",
+      "redacted_lines": 5,
+      "raw_local_ignored_path": "reports/unity/cache-recovery/secrets-raw-player.log"
+    },
+    {
+      "path": "reports/unity/cold/editor.log",
+      "redacted_lines": 107,
+      "raw_local_ignored_path": "reports/unity/cold/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/cold/player.log",
+      "redacted_lines": 5,
+      "raw_local_ignored_path": "reports/unity/cold/secrets-raw-player.log"
+    },
+    {
+      "path": "reports/unity/editor-acceptance/editor.log",
+      "redacted_lines": 31,
+      "raw_local_ignored_path": "reports/unity/editor-acceptance/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/editor-acceptance-fixed/editor.log",
+      "redacted_lines": 47,
+      "raw_local_ignored_path": "reports/unity/editor-acceptance-fixed/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/package-error/editor.log",
+      "redacted_lines": 31,
+      "raw_local_ignored_path": "reports/unity/package-error/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/parallel-base/editor.log",
+      "redacted_lines": 79,
+      "raw_local_ignored_path": "reports/unity/parallel-base/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/parallel-base/player.log",
+      "redacted_lines": 5,
+      "raw_local_ignored_path": "reports/unity/parallel-base/secrets-raw-player.log"
+    },
+    {
+      "path": "reports/unity/parallel-base/wrapper.log",
+      "redacted_lines": 0,
+      "raw_local_ignored_path": "reports/unity/parallel-base/secrets-raw-wrapper.log"
+    },
+    {
+      "path": "reports/unity/parallel-feature/editor.log",
+      "redacted_lines": 107,
+      "raw_local_ignored_path": "reports/unity/parallel-feature/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/parallel-feature/player.log",
+      "redacted_lines": 5,
+      "raw_local_ignored_path": "reports/unity/parallel-feature/secrets-raw-player.log"
+    },
+    {
+      "path": "reports/unity/parallel-feature/wrapper.log",
+      "redacted_lines": 0,
+      "raw_local_ignored_path": "reports/unity/parallel-feature/secrets-raw-wrapper.log"
+    },
+    {
+      "path": "reports/unity/release/editor.log",
+      "redacted_lines": 79,
+      "raw_local_ignored_path": "reports/unity/release/secrets-raw-editor.log"
+    },
+    {
+      "path": "reports/unity/release/player.log",
+      "redacted_lines": 0,
+      "raw_local_ignored_path": "reports/unity/release/secrets-raw-player.log"
+    },
+    {
+      "path": "reports/unity/visual-player.log",
+      "redacted_lines": 5,
+      "raw_local_ignored_path": "reports/unity/secrets-raw-visual-player.log"
+    },
+    {
+      "path": "reports/unity/visual-release-player.log",
+      "redacted_lines": 0,
+      "raw_local_ignored_path": "reports/unity/secrets-raw-visual-release-player.log"
+    }
+  ]
+}

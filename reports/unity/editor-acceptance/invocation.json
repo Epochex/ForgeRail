@@ -1,0 +1,26 @@
+{
+  "status": "blocked",
+  "adapter": "unity",
+  "started_at": "2026-10-20T11:15:09.6435395Z",
+  "unity_path": "<workspace>\\runtime\\tools\\unity\\6000.3.0f1\\Editor\\Unity.exe",
+  "project_path": "runtime/unity-probe/BuildLab",
+  "request": "<workspace>\\runtime\\unity-probe\\request.json",
+  "command_arguments": [
+    "-batchmode",
+    "-nographics",
+    "-quit",
+    "-projectPath",
+    "<workspace>\\runtime\\unity-probe\\BuildLab",
+    "-buildTarget",
+    "Win64",
+    "-logFile",
+    "<workspace>\\reports\\unity\\editor-acceptance\\editor.log",
+    "-executeMethod",
+    "GameBuild.EditorAcceptance.Run",
+    "-acceptanceOutput",
+    "<workspace>\\reports\\unity\\editor-acceptance\\editor-tests.json"
+  ],
+  "editor_exit_code": 1,
+  "error": "Unity license unavailable; activate this Editor using Unity Hub and rerun the recorded command",
+  "finished_at": "2026-10-20T11:15:31.6724098Z"
+}

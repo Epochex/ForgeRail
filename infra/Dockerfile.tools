@@ -1,0 +1,17 @@
+FROM jenkins/inbound-agent@sha256:64a27e807d216d527a7f5224e6ff9733b5cbd8650db3b5dfd0aea3b94949460f AS java
+FROM python@sha256:2c285c669cc837aa3bcf1af23ea1932b7b5214f9c9d3aad22417446ad91cb4fb
+COPY --from=java /opt/java/openjdk /opt/java/openjdk
+COPY --from=java /usr/share/jenkins/agent.jar /opt/agent.jar
+ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:$PATH PYTHONPATH=/workspace/src
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+COPY requirements.lock /opt/requirements.lock
+RUN pip install --no-cache-dir -r /opt/requirements.lock kafka-python==2.3.2
+WORKDIR /workspace
+COPY pyproject.toml /workspace/pyproject.toml
+COPY src /workspace/src
+RUN pip install --no-deps --no-build-isolation -e .
+COPY labs /workspace/labs
+COPY infra/agent.sh /opt/agent.sh
+RUN sed -i 's/\r$//' /opt/agent.sh
+ENTRYPOINT []
+CMD ["sh", "/opt/agent.sh"]

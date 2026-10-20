@@ -1,0 +1,36 @@
+{
+  "project": "ForgeRail",
+  "version": "0.1.0",
+  "recorded_at": "2026-10-20T11:55:29.709107+00:00",
+  "scope": "Public source export; historical real-engine evidence is explicitly separate. No Editor installed in this checkout.",
+  "tests": {
+    "passed": 102,
+    "skipped": 1,
+    "failed": 0
+  },
+  "utf8_fixture_cleanup_targeted_regression": "1 passed after replacing machine-specific input with a temporary Unicode path",
+  "http_demo": {
+    "status": "passed",
+    "stale_report_rejected": true,
+    "artifact_tamper_rejected": true,
+    "audit_chain_valid": true
+  },
+  "documentation": {
+    "relative_links": "passed",
+    "mermaid_diagrams_rendered": 10,
+    "svg_exports": [
+      "docs/assets/overview.svg",
+      "docs/assets/deployment.svg"
+    ]
+  },
+  "publication_checks": {
+    "files": 177,
+    "total_bytes": 527862,
+    "secret_matches": [],
+    "files_over_1_mib": [],
+    "forbidden_files": [],
+    "local_home_paths": [],
+    "broken_document_links": [],
+    "mermaid_diagrams": 10
+  }
+}

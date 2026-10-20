@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "baseline": {
+    "status": "passed",
+    "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+    "release": {
+      "id": "release-a4a78e1d77d0491ca43394f87a531c21",
+      "artifact": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+      "channel": "interview",
+      "phase": "stable",
+      "previous": null,
+      "windows": 0,
+      "release_id": "release-a4a78e1d77d0491ca43394f87a531c21"
+    },
+    "observations": [
+      {
+        "passed": true,
+        "validation_id": "531dda3740ef48d7af03eebf6dfe6ad9",
+        "phase": "shadow",
+        "worker": "validation-0",
+        "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-a4a78e1d77d0491ca43394f87a531c21\\shadow\\validation-0"
+      },
+      {
+        "passed": true,
+        "validation_id": "a21e0b186d9f423c9e2c938655a54119",
+        "phase": "shadow",
+        "worker": "validation-1",
+        "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-a4a78e1d77d0491ca43394f87a531c21\\shadow\\validation-1"
+      },
+      {
+        "passed": true,
+        "validation_id": "9d10074065f1453aae9dafeee34d9d5a",
+        "phase": "canary",
+        "worker": "validation-0",
+        "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-a4a78e1d77d0491ca43394f87a531c21\\canary\\validation-0"
+      },
+      {
+        "passed": true,
+        "validation_id": "3c8c0d7ed20d4d20bab5ca6598567a53",
+        "phase": "canary",
+        "worker": "validation-1",
+        "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-a4a78e1d77d0491ca43394f87a531c21\\canary\\validation-1"
+      }
+    ],
+    "scope": "two logical validation nodes on this host; fresh Player executions for Unity artifacts"
+  },
+  "candidate": {
+    "status": "passed",
+    "artifact_id": "artifact-34e281ec867a422dadc617116bb2ebf4",
+    "release": {
+      "id": "release-2cad36ecf5414bdf8988d36b730c56d5",
+      "artifact": "artifact-34e281ec867a422dadc617116bb2ebf4",
+      "channel": "interview",
+      "phase": "stable",
+      "previous": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+      "windows": 0,
+      "release_id": "release-2cad36ecf5414bdf8988d36b730c56d5"
+    },
+    "observations": [
+      {
+        "passed": true,
+        "validation_id": "2356ba55075f4f6183896cc00c26aaa3",
+        "phase": "shadow",
+        "worker": "validation-0",
+        "artifact_id": "artifact-34e281ec867a422dadc617116bb2ebf4",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-2cad36ecf5414bdf8988d36b730c56d5\\shadow\\validation-0"
+      },
+      {
+        "passed": true,
+        "validation_id": "f06107de4441466486690eeea5149b99",
+        "phase": "shadow",
+        "worker": "validation-1",
+        "artifact_id": "artifact-34e281ec867a422dadc617116bb2ebf4",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-2cad36ecf5414bdf8988d36b730c56d5\\shadow\\validation-1"
+      },
+      {
+        "passed": true,
+        "validation_id": "eadf15a2d68347dca22917ceaf84d429",
+        "phase": "canary",
+        "worker": "validation-0",
+        "artifact_id": "artifact-34e281ec867a422dadc617116bb2ebf4",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-2cad36ecf5414bdf8988d36b730c56d5\\canary\\validation-0"
+      },
+      {
+        "passed": true,
+        "validation_id": "acf5aa1cd9b24022b99ebd636a44a4a0",
+        "phase": "canary",
+        "worker": "validation-1",
+        "artifact_id": "artifact-34e281ec867a422dadc617116bb2ebf4",
+        "evidence_dir": "<workspace>\\runtime\\release-validation\\release-2cad36ecf5414bdf8988d36b730c56d5\\canary\\validation-1"
+      }
+    ],
+    "scope": "two logical validation nodes on this host; fresh Player executions for Unity artifacts"
+  },
+  "rollback": {
+    "release_id": "release-2cad36ecf5414bdf8988d36b730c56d5",
+    "phase": "rolled_back",
+    "status": "passed",
+    "active_artifact": "artifact-c1c8fca8b7654a2da3e011155045fd9c"
+  },
+  "scope": "Two distinct actual Unity artifacts; two logical validation nodes, two phases each, eight fresh Player executions; channel rollback verified in authoritative DB"
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forgerail"
+version = "0.1.0"
+description = "Game build orchestration, Unity validation, and recovery experiments"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Jianke LIN"}]
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "httpx>=0.28,<1", "python-multipart>=0.0.20,<1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.urls]
+Homepage = "https://github.com/Epochex/ForgeRail"
+Repository = "https://github.com/Epochex/ForgeRail"
+Issues = "https://github.com/Epochex/ForgeRail/issues"
+
+[project.scripts]
+gamebuild = "gamebuild.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

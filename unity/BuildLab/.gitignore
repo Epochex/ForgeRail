@@ -1,0 +1,13 @@
+/Library/
+/Temp/
+/Obj/
+/Logs/
+/UserSettings/
+/Assets/Generated/
+/Assets/Generated.meta
+/Assets/StreamingAssets/
+/Assets/StreamingAssets.meta
+/Assets/__GameBuildAcceptance/
+/Assets/__GameBuildAcceptance.meta
+*.csproj
+*.sln

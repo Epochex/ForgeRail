@@ -1,0 +1,4 @@
+FROM jenkins/jenkins@sha256:a660310e39ade10631f774bacd5219de767dfd08947ea5c32a739b5e5bb382c1
+COPY infra/jenkins-plugins.lock /tmp/jenkins-plugins.txt
+RUN jenkins-plugin-cli --plugin-file /tmp/jenkins-plugins.txt --latest=false
+COPY ci/init.groovy /usr/share/jenkins/ref/init.groovy.d/gamebuild.groovy

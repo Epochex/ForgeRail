@@ -1,0 +1,827 @@
+{
+  "status": "passed",
+  "adapter": "unity",
+  "job_id": "20261020T113051Z-6c1207e8-a3842143f1",
+  "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+  "manifest": {
+    "adapter": "unity",
+    "build_id": "20261020T113051Z-6c1207e8-a3842143f1",
+    "commit_sha": "6c1207e8fc3be5c63989e230ac62d56982ed555a",
+    "files": [
+      {
+        "path": "build-info.json",
+        "sha256": "67789219f633ff86249136d1464f18e75dccb699178fea5ac7f6ebebe32d32cf",
+        "size": 476
+      },
+      {
+        "path": "build-report.json",
+        "sha256": "b97063ab89ed8ae9e5a098a8eb251160f2cb7019ac8c5affdb6c6dff07299835",
+        "size": 1258
+      },
+      {
+        "path": "bundles/bundles",
+        "sha256": "7c22c40765a45d552f45d3abfe9195d3ddb017c7a10e81ee796a308e8007ad3a",
+        "size": 1565
+      },
+      {
+        "path": "bundles/bundles.manifest",
+        "sha256": "8577bb509e18a2c91ab1fc4e4d8591df7254e3794ef5dfa11a51fa90ef28a0e5",
+        "size": 171
+      },
+      {
+        "path": "bundles/demo",
+        "sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9",
+        "size": 1236
+      },
+      {
+        "path": "bundles/demo.manifest",
+        "sha256": "80158d1ddf15d3aa04bacc694a014ff793a72a3cce2a009556c5e686e8885e91",
+        "size": 502
+      },
+      {
+        "path": "player/D3D12/D3D12Core.dll",
+        "sha256": "625bd40005b1c3708695d5256ecf230d278e6b8edba5a88af70f3d91324f3052",
+        "size": 4725304
+      },
+      {
+        "path": "player/GameBuildLab.exe",
+        "sha256": "40adc76c08a72722c42921f51052c36de1b8e8c75eb8f76d9007d9e5714ee84f",
+        "size": 667648
+      },
+      {
+        "path": "player/GameBuildLab_Data/app.info",
+        "sha256": "88756cff451f057847fa64ae84e9f3856564e6d434ee3e9c0d49e7a63cfb40e2",
+        "size": 25
+      },
+      {
+        "path": "player/GameBuildLab_Data/boot.config",
+        "sha256": "9506d8a4835a4be9d983e1f36ff128a23d0aa73cd3ce1a0cdc23b274e64999cf",
+        "size": 156
+      },
+      {
+        "path": "player/GameBuildLab_Data/globalgamemanagers",
+        "sha256": "d3fee4badc407eb340ea7ee8cc40c5d946f7645e7781f51ecf41951e951a5632",
+        "size": 22388
+      },
+      {
+        "path": "player/GameBuildLab_Data/globalgamemanagers.assets",
+        "sha256": "d4f6dda05b9495875623423b8bdfd173aae413faab5e14f3a3646d5e6df700e1",
+        "size": 1940
+      },
+      {
+        "path": "player/GameBuildLab_Data/globalgamemanagers.assets.resS",
+        "sha256": "39dd38fcd8dd95d41d6d55fe16a448d29fe2c31d9a162c825c24c6d99a893d7a",
+        "size": 2796240
+      },
+      {
+        "path": "player/GameBuildLab_Data/level0",
+        "sha256": "5ae6d2b8142b057f47d4437be870a42ee9cacf55dec6ae850d57e2deeb6ba53a",
+        "size": 3324
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/Assembly-CSharp.dll",
+        "sha256": "53e5f57b95d91c4d89a94be8afa67c99182b8857abd6cc224230b8a1962d497b",
+        "size": 12288
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/Mono.Security.dll",
+        "sha256": "095361bdec0d4cedeb86e32584f51e02ae9f74f0bcf105fe34347c12ee09544e",
+        "size": 241152
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/mscorlib.dll",
+        "sha256": "c18ce37d14ac391ad399bbe0a6c784937895b6b2a5f7187d5d275b6c04c4bf50",
+        "size": 4632064
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/netstandard.dll",
+        "sha256": "6ae62e082dc494a2433984177f60ca4db5fae69b1f360a8b33754172b310b8c5",
+        "size": 90112
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.ComponentModel.Composition.dll",
+        "sha256": "84b56a5e6893447f11823e8d35951aa28c4b6fea9eff73460174b4b063562033",
+        "size": 257024
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Configuration.dll",
+        "sha256": "15ccff56f202331aeb5e28e24138ef5496b6072db48582ed5c08ce1d519f5d65",
+        "size": 124928
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Core.dll",
+        "sha256": "d7acdd810b2be97861665b5ebd8d8fcc9c38b613ae0ebf9a2ca961305be97b49",
+        "size": 1113088
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Data.DataSetExtensions.dll",
+        "sha256": "8c47bf3e74d016131d0ae8eefe2b7668e46bb4f672cb6239cc6f2f4368b74a36",
+        "size": 29696
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Data.dll",
+        "sha256": "5b3eadb7e34f34648516b3df01aa05c0bc9a4b55f51367ce355e70e13cdf1ccd",
+        "size": 2125312
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.dll",
+        "sha256": "335da294b98bc7a2b7b1bef3ad47c2023c366660e800f1fbd23e52f525a59464",
+        "size": 2641920
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Drawing.dll",
+        "sha256": "9a20d5903cf2fbfb1673568d50fa0205150b9268addbe57e8284baa06f5137d6",
+        "size": 489984
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.EnterpriseServices.dll",
+        "sha256": "b0e80a549ec87249dc2e637b862a81661d09e57680bbb73793da1ff74d3e4134",
+        "size": 44544
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.IO.Compression.dll",
+        "sha256": "86dff7ecfbec819d4ebc128b15525b8d0d818350b8a0a510abd3d7e7468475da",
+        "size": 114688
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.IO.Compression.FileSystem.dll",
+        "sha256": "76eeb7a027a1060e57323e4efd28a9c8597837f6f2ff6b78c7c7d78ddf076a28",
+        "size": 18432
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Net.Http.dll",
+        "sha256": "fbc291e820be4628ca2ccf67d2d93809cac12135726639be39d11ff39796274d",
+        "size": 122880
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Numerics.dll",
+        "sha256": "b890a4ca4551337fd57c917dc7ab5e08556155ed0f1ae3f86d82ead4e9990a88",
+        "size": 119296
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Runtime.Serialization.dll",
+        "sha256": "5ae1e07f3da222777bd1442666bdbc8188550680a5cbe1e2e66b59e7749d91f0",
+        "size": 934400
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Security.dll",
+        "sha256": "d2aee18d6ceebe5d65f38d6cb0e05edde11cdef2dcfe2eeda3150311e9bc2dde",
+        "size": 320000
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.ServiceModel.Internals.dll",
+        "sha256": "22c0ccf71190679f48aaf0898d80b5081a3bebd446cd18a10c6a517031c24d48",
+        "size": 215040
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Transactions.dll",
+        "sha256": "76ab09be75f53ccf0a11511e7ad9a651ae1ce9d613b9b76d2430fd9a00e0dbc9",
+        "size": 35328
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Xml.dll",
+        "sha256": "4337d9c85f5821c50354fb38aa8932aaa189a795235f3bf5903665fe734cd8a8",
+        "size": 3160064
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/System.Xml.Linq.dll",
+        "sha256": "366267298e4279c54a7ee29c39e4255989920ee3b09effddf972c836ef41372b",
+        "size": 136704
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AccessibilityModule.dll",
+        "sha256": "6d0dee32f017d71aafb6935c7463b6399e9fabe37c18aca07abdfc697b1759f8",
+        "size": 50088
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AdaptivePerformanceModule.dll",
+        "sha256": "391a77b89bcb3a389c835d155e2ed8cbe74a27bd2da2b5abf73083500799f740",
+        "size": 120232
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AIModule.dll",
+        "sha256": "c2b98547cd173708091c99ef1596dfba9b94806bdfc4aa7944c1e5f939277b86",
+        "size": 77224
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AMDModule.dll",
+        "sha256": "598b5fe1607146da95cf9ff4202eb070c5a8f150e24b6fb97b5dff1f2ae8832c",
+        "size": 21936
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AndroidJNIModule.dll",
+        "sha256": "d82687adf68cf06ffb36b189193541cdd5788b6adf68cdb03bfef2323a460920",
+        "size": 121264
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AnimationModule.dll",
+        "sha256": "ae738732f8be6022f50df7c6609e3108163f6243bfa4d9b326a6097b858e671e",
+        "size": 225192
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ARModule.dll",
+        "sha256": "0dca029d75e9fefecdb61e0d59645ac3fa440851b2f3a78968c9d52bfc60df5e",
+        "size": 25512
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AssetBundleModule.dll",
+        "sha256": "da51a071fecb8ac74c43316af0a8843577703835b474596a4a877780e2fd5d1a",
+        "size": 41896
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.AudioModule.dll",
+        "sha256": "3868ca125342579d8136e564c53d4185cc47e832a133337d21b10954d75fb252",
+        "size": 142256
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ClothModule.dll",
+        "sha256": "63ea7f34763b80d63d88f7d1ebb60414b10b82ed1b2e1abcdc8b34c24a30b5b1",
+        "size": 36272
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ClusterInputModule.dll",
+        "sha256": "e854ce8cc67686f9d87e2cb30b4547a227329b8f6ec3e90387695f02d484a7b4",
+        "size": 27568
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ClusterRendererModule.dll",
+        "sha256": "d676ba80f26124f9cc80c4d37a5fbe2f770d072c597381196e939deb17d5a55c",
+        "size": 26536
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ContentLoadModule.dll",
+        "sha256": "d0a48dce1ec217bb75cbe1264f4b5048d9028833b6f408b1051c33d00762bcef",
+        "size": 32176
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.CoreModule.dll",
+        "sha256": "0c71b41aeb6b56e71250809ecb2f56b22e6d9ea78f14c92d363012bc655094a9",
+        "size": 1981352
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.CrashReportingModule.dll",
+        "sha256": "d81a381bf7b1edf1277743a0eeccc3871bb6709fc199f481d49610cdfaaabe77",
+        "size": 26544
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.DirectorModule.dll",
+        "sha256": "ee05a1dbdda8e06991283bf79ea1a34acf759a23b2597a2a3f6a843c77a259ce",
+        "size": 41392
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.dll",
+        "sha256": "7c23460351393977403022c11b1f209728109c0097e24c138900c880031a95df",
+        "size": 197040
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.DSPGraphModule.dll",
+        "sha256": "35636e5c8d798f13ca86eaad894682b1d6e51aceea6f8249fb40a1ddac195f06",
+        "size": 31144
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.GameCenterModule.dll",
+        "sha256": "be7cf133ae0a3265ac163523e7f62585c09edf486ac6962ce3f8e6693e07d7ea",
+        "size": 45488
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.GIModule.dll",
+        "sha256": "a87803555e6a1475166c372a643d4004ce69fe36c2d5b6786b0b5a74cc3d1636",
+        "size": 23984
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+        "sha256": "7b8074b51994ea852357eee719d7608b88da7db3df329e1939d9a7d70c7a3f97",
+        "size": 14256
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.GridModule.dll",
+        "sha256": "5caa8f2f5fa282a6d4119806d4bc23d154014aef909c2f28794224c02ab7c254",
+        "size": 30120
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.HierarchyCoreModule.dll",
+        "sha256": "0bd5f272d7559976d86ba711a1701d915918c4c5e6cfbcdafb3e7fcd89cf173b",
+        "size": 108456
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.HierarchyModule.dll",
+        "sha256": "4618ea0ad9b34c4a11a590295ff92d7add57e7d2d20cf86d2f120860ff5c1b77",
+        "size": 102320
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.HotReloadModule.dll",
+        "sha256": "e43b91a9906c84397b200ae1b95cc4476e3dc7852b6c2c8c902829c9303dc163",
+        "size": 23976
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.IdentifiersModule.dll",
+        "sha256": "2f0c674a14bcd96fa3b46eb8edae5fef3a454696a0dff46f7dd4330ad0268bb8",
+        "size": 14760
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ImageConversionModule.dll",
+        "sha256": "719ba69aa8cb1ab024ce0ce539929d47763c88556561ba06973ee5fc8f18fece",
+        "size": 31152
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.IMGUIModule.dll",
+        "sha256": "e07914cb7b9b0c79e543def6e11d532eda7a0f3fb75d99c4c25f8895c4a3d6b4",
+        "size": 192432
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.InputForUIModule.dll",
+        "sha256": "b6c002d72be3b70b96cddbcc01faeecab3795057e62004d062441fdbbbfe2ca3",
+        "size": 57776
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.InputLegacyModule.dll",
+        "sha256": "2168bec1e98b9236366f5579d75bcd899ee20db3c89e33fb25cdaae6cb03dbf5",
+        "size": 45480
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.InputModule.dll",
+        "sha256": "bc0b02653a5f35feafa9d266b21664e5a0e1bb1f0f2bf4f9a030d0ac2d508a7c",
+        "size": 28072
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.InsightsModule.dll",
+        "sha256": "fd0d61cc54b3acd608b6bc461c0a4d77cede298067569c02ff6261964f92f775",
+        "size": 14248
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.JSONSerializeModule.dll",
+        "sha256": "67d4eb3ad84b2100f8ae004387c312b3bc28769c8ad92d6a21e97302c16e25d4",
+        "size": 27048
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.LocalizationModule.dll",
+        "sha256": "84a8bee9281120c6de2a5a0c4ff6eb63c4ff684541316695e1d5ecfc70a89771",
+        "size": 26544
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.MarshallingModule.dll",
+        "sha256": "fee72a32b4b9a9ab7df8e0bcaf6928a01675358e6c04c67de9fc07fef19e8ab7",
+        "size": 83376
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.MultiplayerModule.dll",
+        "sha256": "1d99c428471eecde1c3e98b8be6949c5052a927da28f9190da4cc614ca62dc43",
+        "size": 18352
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.NVIDIAModule.dll",
+        "sha256": "1123baa73309bc6c1d7e47813e9c2bcbc90aad44a2f3e3c145f31a63c7e0cdff",
+        "size": 40368
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ParticleSystemModule.dll",
+        "sha256": "1651d208cb3c6249e01b93c75163e5ca6af90c8bfeba4fa0118059f49fdbb674",
+        "size": 171440
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.PerformanceReportingModule.dll",
+        "sha256": "d982218928990e632962e47de164bdb289bddea7e7212f2ba4b5f76aa136f650",
+        "size": 25008
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.Physics2DModule.dll",
+        "sha256": "901b919df461a5049099ab57359ab055e9111c25e02d23f4e8b19223b6ce9338",
+        "size": 572848
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.PhysicsBackendPhysXModule.dll",
+        "sha256": "24290c92175c52c4c982b4eb011bb9c32ea668d0c307c00af59e26e5c62491bc",
+        "size": 14256
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.PhysicsModule.dll",
+        "sha256": "c744cedf99ad9b1b936861647fb44541533f52fb43b5a93bdfaa2336e162ed7a",
+        "size": 181168
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.PropertiesModule.dll",
+        "sha256": "db483f37ee63847a346dbaf1509d71deedc3e4f1e9255b1a0b103952f35b7dfa",
+        "size": 149424
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.RenderAs2DModule.dll",
+        "sha256": "2827fd9a819ea49cc824bc26109f38a3d433ca2d963aef41cc74769a926a196c",
+        "size": 25512
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+        "sha256": "bb3b579a27294e3e2ab407b047e5c1df6aa78c635afbef245891ab0493c2aa4c",
+        "size": 24488
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ScreenCaptureModule.dll",
+        "sha256": "1e0a7700eb035f02596dd3a27821c6e74e00e9a88f97d5f827879a73250c0551",
+        "size": 26024
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ShaderRuntimeModule.dll",
+        "sha256": "06a28811652fa08bb609f822cfde1bde5647034069cf9b418594e17faf811cc6",
+        "size": 25520
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.dll",
+        "sha256": "25052be12aaf8425c2bd37c688f9c11a83fa2166ae3537409c8f66e08fa95aea",
+        "size": 24496
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.SharedInternalsModule.dll",
+        "sha256": "4659d5f8cbacabe6f2b5d7f264e04c24b227cac665e0ad417f5807357b60a32d",
+        "size": 37800
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.SpriteMaskModule.dll",
+        "sha256": "9c405ca624cef9893a9bbe46ee03aa6304f9de28966b9f0a27e76ef23bb16527",
+        "size": 28072
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.SpriteShapeModule.dll",
+        "sha256": "f41334c77f407e3489852c283b4b09a44ce6f63f4aaaae1774a2da6d7dd36697",
+        "size": 31664
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.StreamingModule.dll",
+        "sha256": "cc350062d65c17dc261f3ef9d4c05b2d262bec7172ab480555495a71cb5fa39d",
+        "size": 25512
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.SubstanceModule.dll",
+        "sha256": "6c775b6ad348cc797c4fb06f92b156600af2b33ced5eac833785391281ad74b3",
+        "size": 29096
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.SubsystemsModule.dll",
+        "sha256": "26e17d39b2cd70432ec4daa1ea457e8d9bb0bf24a5165cb925436171a08d71ab",
+        "size": 41392
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TerrainModule.dll",
+        "sha256": "2996857d7a988bcb4f6dbb2b92d5435cd7abb5fc2d3ff4dbd924a2cd8ba7b3be",
+        "size": 133040
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TerrainPhysicsModule.dll",
+        "sha256": "e8a40b2091bccadacf0c90a23f008f870ad33a59842e6d42b01ab4c631719dae",
+        "size": 25512
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll",
+        "sha256": "8274944b3c213ac898efe8fef1c8230090850a3ddf7ecb8a11ab79f962218336",
+        "size": 81832
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll",
+        "sha256": "1f9ae2e5f58a39c7faabd895475e1cc20c4cba09d2b9aad7aae17844b547c3a2",
+        "size": 340912
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TextRenderingModule.dll",
+        "sha256": "b7bd94c9884df2264ea1d37146463756fc00a167c2e5f37c245ffd2660ca07d3",
+        "size": 39336
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TilemapModule.dll",
+        "sha256": "f50878d423bcacdd9253c68db92961de28176160b87aaaba4b4346c6e98d2155",
+        "size": 57768
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.TLSModule.dll",
+        "sha256": "00c1f4394a581b2b6960bee97664d41a62ee61375a1a9b3eb94d064824c3b6b6",
+        "size": 31144
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UIElementsModule.dll",
+        "sha256": "fd8e9ada48a2ad6d2b4ad0df0caefbcd3822ba7be005edd4a5ebf8f0e95382dc",
+        "size": 2416560
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UIModule.dll",
+        "sha256": "09b3280d043d7b748fd8edc1e71b3c41264c202fd1ca8e97433c089c42885168",
+        "size": 49584
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UmbraModule.dll",
+        "sha256": "fa8ebe427f651db3db1b6e552f1548de1a94712bdfaba10187443315315b1e7d",
+        "size": 23984
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
+        "sha256": "be3a86026adc3493575a569103a33eddf8255b5de3c5fec112c77a6c35869ba7",
+        "size": 35760
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityAnalyticsModule.dll",
+        "sha256": "01cbf02a60120a866d66395bb27f72f0f280bf5705e831b8da86d2458243c8ca",
+        "size": 60848
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityConnectModule.dll",
+        "sha256": "19ba31e212b967420ed905e9735490a71d77b8e65dcffd6ecb6e9a9791398c1f",
+        "size": 27048
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityConsentModule.dll",
+        "sha256": "2ea17930778c49b4721b44577ca292b25e2cd14539954be5b2ca2b96e5a1483a",
+        "size": 16304
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityCurlModule.dll",
+        "sha256": "04ed4202c0f5e8f1867b678f984416662758576dc5fa5ce3eb859c8cd4b83580",
+        "size": 26032
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
+        "sha256": "f8b6726a656c4cdd1dbc1134a80590b40672b3b933412bd015381d7a6aabb307",
+        "size": 28584
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
+        "sha256": "6bf149c98e454c1d13b675b6a0ed757972aaf152badeae74582bb695287dc923",
+        "size": 28072
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityWebRequestModule.dll",
+        "sha256": "0beca0db74c3f01d52aaead1f5a75dfdedc72c8e3ecdb0e9aaa9bb9012d4247c",
+        "size": 69040
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
+        "sha256": "e35c029d43046ad042fe9052e9ba0e5cb7120b21caa77c9847021b98e9bc3ea2",
+        "size": 27560
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
+        "sha256": "e9a1c32700f9b6fd1a992d0ae56e293cbbbd40ec4bcf04caef335b790e2f4b47",
+        "size": 36264
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.VectorGraphicsModule.dll",
+        "sha256": "f321ddea32275e82f6204b75c67fb5df6dd56dc56353cbca4b4baaf4b9145c1a",
+        "size": 252328
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.VehiclesModule.dll",
+        "sha256": "b262ff897add8039359cc4b427641e68f8d0c419bee61a57b9b5fc1902119420",
+        "size": 31152
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.VFXModule.dll",
+        "sha256": "b422153e1b35d8a7b2eeebf790db1152e870cd535402826293718aff7435ce9e",
+        "size": 78256
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.VideoModule.dll",
+        "sha256": "412a00541f1fdb085b47a2d29feffca7cf2e3aa9d066f0a8dee56fbb550d4cc9",
+        "size": 49072
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.VirtualTexturingModule.dll",
+        "sha256": "292430e59edd0b771252b9bba7d6e79493e1c4e1ced51bfa1eccf55d5e85db00",
+        "size": 42920
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.VRModule.dll",
+        "sha256": "6149132a023cf858c316f915434f1ecf8c0ec392cd5d125d5de52b3b7d44c2b2",
+        "size": 31664
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.WindModule.dll",
+        "sha256": "56c86a3dd9aa90f28524988f2769a874950bf33f14582debb88ed450433e6e0a",
+        "size": 26544
+      },
+      {
+        "path": "player/GameBuildLab_Data/Managed/UnityEngine.XRModule.dll",
+        "sha256": "d09b0c2abc74dd68bb19c962f80e05c5173d7a314425c2c85b3321af17c47783",
+        "size": 87984
+      },
+      {
+        "path": "player/GameBuildLab_Data/Resources/unity default resources",
+        "sha256": "776d63d5d172cc1903a8086214e540819ca487b790d81f85607755211d604948",
+        "size": 5883780
+      },
+      {
+        "path": "player/GameBuildLab_Data/Resources/unity_builtin_extra",
+        "sha256": "50e3ef7c55d87a0d30069cf6b04c19e89113fa4780bcc47ef9e042d1a84a6b00",
+        "size": 396316
+      },
+      {
+        "path": "player/GameBuildLab_Data/RuntimeInitializeOnLoads.json",
+        "sha256": "6a33c1efd5944feb0cb1e012e26b30c3f43fec918e5643e72ab945a9c504ff13",
+        "size": 13
+      },
+      {
+        "path": "player/GameBuildLab_Data/ScriptingAssemblies.json",
+        "sha256": "c71237b688554bbc092453ca07736f826929d43d30d07a76e70bc852c0bb8b56",
+        "size": 3163
+      },
+      {
+        "path": "player/GameBuildLab_Data/sharedassets0.assets",
+        "sha256": "2a57d3a6cbc0d6e7bcf644e6f52a3b9838b4bc893552a6cdae00af0a254f8dd2",
+        "size": 58528
+      },
+      {
+        "path": "player/GameBuildLab_Data/sharedassets0.assets.resS",
+        "sha256": "393efe6399536384aa91bdfc4e64f244b4d3e1fbb6a4ff145c483ffee64ccb36",
+        "size": 524288
+      },
+      {
+        "path": "player/GameBuildLab_Data/StreamingAssets/GameBuild/build-info.json",
+        "sha256": "5c5122bb59183debde934dc7959bfa31b27a0d93a8f319793d991d95f6953223",
+        "size": 514
+      },
+      {
+        "path": "player/GameBuildLab_Data/StreamingAssets/GameBuild/demo",
+        "sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9",
+        "size": 1236
+      },
+      {
+        "path": "player/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
+        "sha256": "b367636b41cef1d5d66bf1f06f1a9fe587383864025c903c86f6668da0de607d",
+        "size": 7828912
+      },
+      {
+        "path": "player/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
+        "sha256": "9d63e9a3478a9efc2204f8e7291d429d4db51a0cc097917b6bdbc229117705b0",
+        "size": 611240
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
+        "sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
+        "size": 1605
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
+        "sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
+        "size": 60575
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/2.0/machine.config",
+        "sha256": "e91782a27fa39fc6c1d6ee8b08529f5d35052310d0006034b878eb04b8f2af30",
+        "size": 29066
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/2.0/settings.map",
+        "sha256": "49c6160f9d54af4270a3b4e997fc4a8301f79b9e2070118fa46ddbcbbc44f9a2",
+        "size": 2622
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/2.0/web.config",
+        "sha256": "cf2b54339e069b9e42f7d6795eecbf562c50c1011f4ca8f65f578fe52d97ff92",
+        "size": 11635
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
+        "sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
+        "size": 1605
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
+        "sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
+        "size": 60575
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.0/machine.config",
+        "sha256": "e60aec2c5115d65b3acb3c55ea21576dbd770f579166c017125571e46ae560ed",
+        "size": 33598
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.0/settings.map",
+        "sha256": "ce1db1ad8a9512073164e3eccdc193f7eda036e1a9733caec4635de21b2865c8",
+        "size": 2622
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.0/web.config",
+        "sha256": "e38bb8cc68fe5b4edecdfd288d094b9e8ced7629039b2a347682aba0d8bd7492",
+        "size": 18802
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
+        "sha256": "8a1082057ac5681dcd4e9c227ed7fb8eb42ac1618963b5de3b65739dd77e2741",
+        "size": 1605
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
+        "sha256": "751861040b69ea63a3827507b7c8da9c7f549dc181c1c8af4b7ca78cc97d710a",
+        "size": 60575
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.5/machine.config",
+        "sha256": "ee950004b576fb28dc85f4b0435ed04bf96612de2e8b53be84d07afe85a0de6c",
+        "size": 34056
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.5/settings.map",
+        "sha256": "ce1db1ad8a9512073164e3eccdc193f7eda036e1a9733caec4635de21b2865c8",
+        "size": 2622
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/4.5/web.config",
+        "sha256": "c4cbddd4fd9347b58cc5a72b36dc4ba1ad2bb699e65869d05cd3fb9865f0d824",
+        "size": 18811
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/browscap.ini",
+        "sha256": "4ddd50f31fb968f30bedefc253a46dc3f2890192d05cdaa9e0a64a056eee807e",
+        "size": 311984
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/config",
+        "sha256": "5776169973a26a387b8b3e5c0f2301a7ab9a6dd7c7d3efa22a96abc47fbf8662",
+        "size": 3815
+      },
+      {
+        "path": "player/MonoBleedingEdge/etc/mono/mconfig/config.xml",
+        "sha256": "0c56e34c69124510fa8c19e7b4c2ca6c1c4ff460ae19f798dd0ca035809e396d",
+        "size": 25817
+      },
+      {
+        "path": "player/UnityCrashHandler64.exe",
+        "sha256": "74b38fb8774dd7735bf754d0128b60ad9f4d2cfe7ed2260f0528385d32366f00",
+        "size": 1609640
+      },
+      {
+        "path": "player/UnityPlayer.dll",
+        "sha256": "bfbf6cdd038e44a14739fcca0bc8d5d7f8e0eef8ba961ea59e45ddfabcb658e7",
+        "size": 35782064
+      },
+      {
+        "path": "smoke.json",
+        "sha256": "fe7d93d5bb3ba4432c34e37ed0b4cf4aea2527f455460ff7051c3a9f55bb4796",
+        "size": 577
+      }
+    ],
+    "input_digest": "3986e4fa39a96e14b3f073474f1d0d5b44b6209323deeae884ba743b41b08e56",
+    "schema_version": 1,
+    "sha256": "c5980d289cbb08cbb8aeb741eb904ce1a755eaf35253c6acd2d62e41f4f8ba4e",
+    "size": 32632400
+  },
+  "receipts": {
+    "build-info.json": {
+      "adapter": "unity",
+      "build_id": "20261020T113051Z-6c1207e8-a3842143f1",
+      "commit_sha": "6c1207e8fc3be5c63989e230ac62d56982ed555a",
+      "input_digest": "3986e4fa39a96e14b3f073474f1d0d5b44b6209323deeae884ba743b41b08e56",
+      "target": "StandaloneWindows64",
+      "configuration": "Release",
+      "unity_version": "6000.3.0f1",
+      "config_sha256": "974bfe3edcc0927ee6936f0aa641d4f84539d05006178094fc2fe40ca8f0de58",
+      "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9"
+    },
+    "build-report.json": {
+      "adapter": "unity",
+      "status": "passed",
+      "result": "Succeeded",
+      "build_id": "20261020T113051Z-6c1207e8-a3842143f1",
+      "commit_sha": "6c1207e8fc3be5c63989e230ac62d56982ed555a",
+      "input_digest": "3986e4fa39a96e14b3f073474f1d0d5b44b6209323deeae884ba743b41b08e56",
+      "unity_version": "6000.3.0f1",
+      "target": "StandaloneWindows64",
+      "configuration": "Release",
+      "started_at": "2026-10-20T11:31:05.4037953Z",
+      "duration_seconds": 13.1949317,
+      "total_size": 88320309,
+      "total_errors": 0,
+      "total_warnings": 0,
+      "error": "",
+      "issues": [],
+      "resource_dependencies": [
+        "Assets/BundleSource/demo-config.json"
+      ],
+      "resource_inputs": [
+        {
+          "path": "Assets/BundleSource/demo-config.json",
+          "sha256": "974bfe3edcc0927ee6936f0aa641d4f84539d05006178094fc2fe40ca8f0de58",
+          "meta_sha256": "68f9754bc11495e17e648ce12fc5006d6d30deb51bc10ac2f58e2fe17d4888e6"
+        }
+      ],
+      "resource_input_digest": "11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575",
+      "exporter_version": "gamebuild-bundle-v1",
+      "exporter_sha256": "a3c6c3e8375c99b8cacb06310c41b0e3909f365941359edec23a0c3581778820",
+      "resource_cache_hit": false,
+      "resource_cache_lookup_seconds": 0.0011794,
+      "resource_export_seconds": 2.4410282,
+      "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9",
+      "bundle_bytes": 1236
+    },
+    "smoke.json": {
+      "adapter": "unity",
+      "build_id": "20261020T113051Z-6c1207e8-a3842143f1",
+      "commit_sha": "6c1207e8fc3be5c63989e230ac62d56982ed555a",
+      "input_digest": "3986e4fa39a96e14b3f073474f1d0d5b44b6209323deeae884ba743b41b08e56",
+      "target": "StandaloneWindows64",
+      "configuration": "Release",
+      "unity_version": "6000.3.0f1",
+      "config_sha256": "974bfe3edcc0927ee6936f0aa641d4f84539d05006178094fc2fe40ca8f0de58",
+      "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9",
+      "asset_loaded": true,
+      "status": "passed",
+      "error": "",
+      "started_at": "2026-10-20T11:31:20.4640402Z"
+    }
+  },
+  "archive_path": "evidence/unity/package.zip"
+}

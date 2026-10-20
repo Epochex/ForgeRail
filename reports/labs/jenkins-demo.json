@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "adapter": "lab",
+  "description": "actual HTTP, Git worktrees and two node processes; not a Unity build",
+  "jobs": [
+    {
+      "idem": "branch-0",
+      "request": {
+        "adapter": "lab",
+        "branch": "main",
+        "build_script_version": "1",
+        "commit_sha": "23dffee3c09ede2c4782f8926dc17be1b3af5a43",
+        "configuration": "Release",
+        "input_digest": "e07200d925f07ad1f37b23fa63b48c2c39a198bdb7e58ab65cd82e2e8249ee2e",
+        "project_id": "demo",
+        "target": "lab"
+      },
+      "state": "succeeded",
+      "attempt": 1,
+      "worker": "node-0",
+      "token": null,
+      "expiry": null,
+      "detail": "",
+      "created": 1792495845.8727527,
+      "job_id": "20261020T113045Z-23dffee3-5e6b3249b4",
+      "artifact_id": "artifact-74cf4376edfb4710b36088a2778b2219"
+    },
+    {
+      "idem": "branch-1",
+      "request": {
+        "adapter": "lab",
+        "branch": "feature/resource-change",
+        "build_script_version": "1",
+        "commit_sha": "0ecb754edbcc546c0d465494a3b71c5269405036",
+        "configuration": "Release",
+        "input_digest": "960b8eb9c5676c3666481c7bea4b3986f6917a7a9f461aac787b86f75439415c",
+        "project_id": "demo",
+        "target": "lab"
+      },
+      "state": "succeeded",
+      "attempt": 1,
+      "worker": "node-1",
+      "token": null,
+      "expiry": null,
+      "detail": "",
+      "created": 1792495845.8875277,
+      "job_id": "20261020T113045Z-0ecb754e-6696bb7500",
+      "artifact_id": "artifact-c7203dff1f1745c3bed28f695e6d756b"
+    }
+  ],
+  "stale_report_rejected": true,
+  "artifact_tamper_rejected": true,
+  "audit_chain_valid": true,
+  "evidence_dir": "/tmp/gamebuild-jenkins-demo/run-09029c12b9"
+}

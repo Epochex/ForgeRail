@@ -1,0 +1,26 @@
+FROM python@sha256:2c285c669cc837aa3bcf1af23ea1932b7b5214f9c9d3aad22417446ad91cb4fb AS dependencies
+ARG DEP_REVISION=v1
+RUN python -c "import hashlib; print(hashlib.sha256(b'${DEP_REVISION}').hexdigest())" > /dependency.lock
+FROM dependencies AS app
+ARG APP_REVISION=v1
+ARG BUILD_SHA
+ENV APP_REVISION=$APP_REVISION BUILD_SHA=$BUILD_SHA
+COPY labs/runtime.py /app/runtime.py
+RUN python -m py_compile /app/runtime.py
+CMD ["python", "/app/runtime.py"]
+FROM app AS core
+ENV ROLE=core
+FROM app AS edge
+ENV ROLE=edge
+FROM app AS collector
+ENV ROLE=collector
+FROM app AS processor
+ENV ROLE=processor
+FROM app AS gateway
+ENV ROLE=gateway
+FROM app AS scheduler
+ENV ROLE=scheduler
+FROM app AS exporter
+ENV ROLE=exporter
+FROM app AS observer
+ENV ROLE=observer

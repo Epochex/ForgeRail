@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "screenshot": "reports/unity/player-window.png",
+  "window_handle": 19603066,
+  "capture_ok": true,
+  "process_id": 38860,
+  "build_id": "unity-release-20261020",
+  "window_title": "GameBuildLab",
+  "captured_at": "2026-10-20T11:25:16.4251193Z",
+  "capture_method": "PrintWindow with PW_RENDERFULLCONTENT on this Player window only",
+  "verification": "Inspected actual Release Player window image: matching build ID and commit, baseline-v1 bundle loaded, cube/floor scene and movement instructions visible; this is a window-only capture"
+}

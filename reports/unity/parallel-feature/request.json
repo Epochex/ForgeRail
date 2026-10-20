@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "project_id": "buildlab",
+  "adapter": "unity",
+  "commit_sha": "1c39e8b1b5fbf025865752d95a393623d2f8b880",
+  "branch": "feature/resource-change",
+  "target": "StandaloneWindows64",
+  "configuration": "Development",
+  "unity_version": "6000.3.0f1",
+  "build_script_version": "1",
+  "dependency_lock_digest": "98a2346b91aec8d834ab538d96c2a5791596d48faebfdb6ae35819f4992a06b1",
+  "check_rules_digest": "4c4a8b4168a7b6886433035b4619f8d0f7851d6480521540611705cd0906680e",
+  "input_digest": "991616496bf102d7de90b5d0cc2fc750bb224b5a68156c13a80ad3bb873a8523",
+  "build_id": "unity-parallel-feature-20261020",
+  "output_dir": "<workspace>\\runtime\\unity-output-parallel-feature"
+}

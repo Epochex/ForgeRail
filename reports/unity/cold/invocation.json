@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "adapter": "unity",
+  "started_at": "2026-10-20T11:18:14.4962357Z",
+  "unity_path": "<workspace>\\runtime\\tools\\unity\\6000.3.0f1\\Editor\\Unity.exe",
+  "project_path": "runtime/unity-build-snapshot/unity/BuildLab",
+  "request": "<workspace>\\runtime\\unity-cold-request.json",
+  "command_arguments": [
+    "-batchmode",
+    "-nographics",
+    "-quit",
+    "-projectPath",
+    "<workspace>\\runtime\\unity-build-snapshot\\unity\\BuildLab",
+    "-buildTarget",
+    "Win64",
+    "-logFile",
+    "<workspace>\\reports\\unity\\cold\\editor.log",
+    "-assetCacheDir",
+    "<workspace>\\runtime\\unity-export-cache",
+    "-executeMethod",
+    "GameBuild.BuildEntry.Build",
+    "-buildRequest",
+    "<workspace>\\runtime\\unity-cold-request.json"
+  ],
+  "editor_exit_code": 0,
+  "smoke_exit_code": 0,
+  "finished_at": "2026-10-20T11:19:00.6322166Z"
+}

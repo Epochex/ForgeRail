@@ -1,0 +1,12 @@
+{
+  "status": "installed",
+  "version": "6000.3.0f1",
+  "revision": "d1870ce95baf",
+  "source_url": "https://download.unity3d.com/download_unity/d1870ce95baf/Windows64EditorInstaller/UnitySetup64-6000.3.0f1.exe",
+  "editor": "<workspace>\\runtime\\tools\\unity\\6000.3.0f1\\Editor\\Unity.exe",
+  "started_at": "2026-10-20T11:14:35.1321144Z",
+  "product_version": "6000.3.0f1_d1870ce95baf",
+  "file_version": "6000.3.0.13731596",
+  "license_status": "not_checked; real batch execution determines license availability",
+  "finished_at": "2026-10-20T11:14:35.1877796Z"
+}

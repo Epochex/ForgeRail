@@ -1,0 +1,16 @@
+{
+  "os": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "architecture": "x86_64",
+  "python": "3.11.15",
+  "git": "git version 2.47.3",
+  "disk_free_bytes": 977504075776,
+  "workspace": "/home/agent/workspace/gamebuild-lab",
+  "workspace_writable": true,
+  "unity": {
+    "available": false,
+    "path": null,
+    "version": null,
+    "license": "not_checked",
+    "build_modules": "not_checked"
+  }
+}

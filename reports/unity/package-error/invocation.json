@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "adapter": "unity",
+  "started_at": "2026-10-20T11:16:04.5649664Z",
+  "unity_path": "<workspace>\\runtime\\tools\\unity\\6000.3.0f1\\Editor\\Unity.exe",
+  "project_path": "runtime/unity-probe/BuildLab",
+  "request": "<workspace>\\runtime\\unity-probe\\request.json",
+  "command_arguments": [
+    "-batchmode",
+    "-nographics",
+    "-quit",
+    "-projectPath",
+    "<workspace>\\runtime\\unity-probe\\BuildLab",
+    "-buildTarget",
+    "Win64",
+    "-logFile",
+    "<workspace>\\reports\\unity\\package-error\\editor.log",
+    "-executeMethod",
+    "GameBuild.EditorAcceptance.Run",
+    "-acceptanceOutput",
+    "<workspace>\\reports\\unity\\package-error\\editor-tests.json"
+  ],
+  "editor_exit_code": 1,
+  "error": "Unity batch invocation failed (1); inspect <workspace>\\reports\\unity\\package-error\\editor.log",
+  "finished_at": "2026-10-20T11:16:11.1863883Z"
+}

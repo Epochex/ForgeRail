@@ -1,0 +1,15 @@
+{
+  "adapter": "unity",
+  "build_id": "unity-parallel-feature-20261020",
+  "commit_sha": "1c39e8b1b5fbf025865752d95a393623d2f8b880",
+  "input_digest": "991616496bf102d7de90b5d0cc2fc750bb224b5a68156c13a80ad3bb873a8523",
+  "target": "StandaloneWindows64",
+  "configuration": "Development",
+  "unity_version": "6000.3.0f1",
+  "config_sha256": "d069b7b86973044a719532bf9fa6b6e4b507c949ab3aafab09a971062681b7f3",
+  "bundle_sha256": "bfc8a473024d209ab447906ae105ea32d952057f88950ca8709abd30fb56a842",
+  "asset_loaded": true,
+  "status": "passed",
+  "error": "",
+  "started_at": "2026-10-20T11:21:25.4798631Z"
+}

@@ -1,0 +1,23 @@
+{
+  "idem": "3829038dcefb44e29985278af3f184bd",
+  "request": {
+    "adapter": "unity",
+    "branch": "detached",
+    "build_script_version": "1",
+    "commit_sha": "6c1207e8fc3be5c63989e230ac62d56982ed555a",
+    "configuration": "Release",
+    "input_digest": "3986e4fa39a96e14b3f073474f1d0d5b44b6209323deeae884ba743b41b08e56",
+    "project_id": "buildlab",
+    "target": "StandaloneWindows64",
+    "unity_version": "6000.3.0f1"
+  },
+  "state": "succeeded",
+  "attempt": 1,
+  "worker": "windows-unity",
+  "token": null,
+  "expiry": null,
+  "detail": "",
+  "created": 1792495851.9847507,
+  "job_id": "20261020T113051Z-6c1207e8-a3842143f1",
+  "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c"
+}

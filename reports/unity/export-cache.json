@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "unity_version": "6000.3.0f1",
+  "source_commit": "b77deca57e09f0bc413563d20f6392889742823d",
+  "observations": {
+    "cold_miss": true,
+    "unchanged_input_hit": true,
+    "dependency_change_miss": true,
+    "corruption_quarantined": true,
+    "corruption_rebuilt_with_matching_runtime_receipt": true
+  },
+  "key": "11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575",
+  "quarantine_paths": [
+    "<workspace>\\runtime\\unity-export-cache\\11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575.corrupt-e6fcc544403b435d9c6c6a9cedc2b641"
+  ],
+  "runs": {
+    "cold": {
+      "resource_input_digest": "11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575",
+      "cache_hit": false,
+      "lookup_seconds": 0.0005229,
+      "export_seconds": 3.2171707,
+      "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9"
+    },
+    "unchanged": {
+      "resource_input_digest": "11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575",
+      "cache_hit": true,
+      "lookup_seconds": 0.039161299999999996,
+      "export_seconds": 0.0,
+      "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9"
+    },
+    "changed_resource": {
+      "resource_input_digest": "f1aef3bbf7de0473f50339e8a3a4ff01024a238336ba289d971f41267ec98377",
+      "cache_hit": false,
+      "lookup_seconds": 0.0,
+      "export_seconds": 3.4901831,
+      "bundle_sha256": "bfc8a473024d209ab447906ae105ea32d952057f88950ca8709abd30fb56a842"
+    },
+    "corruption_recovery": {
+      "resource_input_digest": "11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575",
+      "cache_hit": false,
+      "lookup_seconds": 0.024106,
+      "export_seconds": 1.9691299,
+      "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9"
+    }
+  },
+  "note": "Actual Unity AssetBundle export/cache operations; raw timings, no cold/warm speedup claim because complete build startup conditions differ"
+}

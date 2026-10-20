@@ -1,0 +1,480 @@
+{
+  "status": "passed",
+  "run_id": "8036828087",
+  "commit_sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+  "cold_definition": "--no-cache per target; no global cache deleted; base image pre-pulled",
+  "rounds": [
+    {
+      "name": "cold",
+      "seconds": 44.843,
+      "targets": [
+        {
+          "role": "core",
+          "image_tag": "gamebuildlab/core:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:f9a6bb9d700f05510f67d34d3851c29333203b9aeff27ad075a6bd71f0fb4733",
+          "seconds": 4.078,
+          "cached_steps": 1,
+          "identity": {
+            "role": "core",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494641.5250754
+          }
+        },
+        {
+          "role": "edge",
+          "image_tag": "gamebuildlab/edge:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:43111743fa3a5e96bc7ff328010a4f02f5c1ed1768db0cbb38332f2b12e65c0f",
+          "seconds": 4.484,
+          "cached_steps": 1,
+          "identity": {
+            "role": "edge",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494649.7127166
+          }
+        },
+        {
+          "role": "collector",
+          "image_tag": "gamebuildlab/collector:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:0c62a12bbcb5190e5e47c6bd05bdfa80330cf6923a07c9d1be055d4f417c0547",
+          "seconds": 5.0,
+          "cached_steps": 1,
+          "identity": {
+            "role": "collector",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494656.7701209
+          }
+        },
+        {
+          "role": "processor",
+          "image_tag": "gamebuildlab/processor:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:2b7d20ca9a3afff7e99c4fd2171cf55c16d2f79ad68368a587e0157d329fe3d3",
+          "seconds": 4.563,
+          "cached_steps": 1,
+          "identity": {
+            "role": "processor",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494663.3995051
+          }
+        },
+        {
+          "role": "gateway",
+          "image_tag": "gamebuildlab/gateway:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:a67cccfa48a94bdc2fb6fc360b7a0a073e8d3d9ebf05e68c8877e8b6556eb9dd",
+          "seconds": 6.359,
+          "cached_steps": 1,
+          "identity": {
+            "role": "gateway",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494672.3030272
+          }
+        },
+        {
+          "role": "scheduler",
+          "image_tag": "gamebuildlab/scheduler:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:e6a55797e2fb1b1295d8a49aff9ec80cb7e44651a454fb4d7c3ec924ef6506d8",
+          "seconds": 8.859,
+          "cached_steps": 1,
+          "identity": {
+            "role": "scheduler",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494685.1992245
+          }
+        },
+        {
+          "role": "exporter",
+          "image_tag": "gamebuildlab/exporter:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:60b6235de5450fc05f077b308de8187655df21ed5dc30fb824f8bb265586a8b5",
+          "seconds": 5.828,
+          "cached_steps": 1,
+          "identity": {
+            "role": "exporter",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494693.3028862
+          }
+        },
+        {
+          "role": "observer",
+          "image_tag": "gamebuildlab/observer:bbb34456e24f-8036828087-cold",
+          "image_id": "sha256:344a8f1d9c3c56a6d42fbd5b7a7b98f53d38dae178c15aec5c54770418a784e5",
+          "seconds": 5.672,
+          "cached_steps": 1,
+          "identity": {
+            "role": "observer",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494701.7729337
+          }
+        }
+      ]
+    },
+    {
+      "name": "warm",
+      "seconds": 35.109,
+      "targets": [
+        {
+          "role": "core",
+          "image_tag": "gamebuildlab/core:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:bad4c47c27e6e9cc99bcbe5800237c1afcb52938c48163c16b7261cb22791ee6",
+          "seconds": 2.969,
+          "cached_steps": 4,
+          "identity": {
+            "role": "core",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494706.8154898
+          }
+        },
+        {
+          "role": "edge",
+          "image_tag": "gamebuildlab/edge:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:71a3eb441343bfec64a6be8419ebe73dcfb4c482b8fec90f61cc673b95294ede",
+          "seconds": 2.75,
+          "cached_steps": 4,
+          "identity": {
+            "role": "edge",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494711.4737148
+          }
+        },
+        {
+          "role": "collector",
+          "image_tag": "gamebuildlab/collector:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:537eafb15a5955245882598f438c003495ab89a136b5fae3543814b1cb5858aa",
+          "seconds": 2.89,
+          "cached_steps": 3,
+          "identity": {
+            "role": "collector",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494716.4335449
+          }
+        },
+        {
+          "role": "processor",
+          "image_tag": "gamebuildlab/processor:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:ef615fb071480ac0d892a429e71e18235789a916e36f9a4acf1936597c146bfa",
+          "seconds": 2.719,
+          "cached_steps": 3,
+          "identity": {
+            "role": "processor",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494721.4471586
+          }
+        },
+        {
+          "role": "gateway",
+          "image_tag": "gamebuildlab/gateway:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:47280e9245d83ee172e7b8cd62efb28f59f02fb04a075401c5ce98df5ac60d99",
+          "seconds": 6.125,
+          "cached_steps": 3,
+          "identity": {
+            "role": "gateway",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494730.2422526
+          }
+        },
+        {
+          "role": "scheduler",
+          "image_tag": "gamebuildlab/scheduler:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:f4786be73ae1937a486052abeda6d8f6c31dedcecd062c33bcf04bbab758f9a3",
+          "seconds": 6.172,
+          "cached_steps": 3,
+          "identity": {
+            "role": "scheduler",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494738.6163988
+          }
+        },
+        {
+          "role": "exporter",
+          "image_tag": "gamebuildlab/exporter:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:9a9960b3ace35dd948259d4687f1e9c576c8f069c58d0a1574b08fe0d3cb9b9c",
+          "seconds": 4.89,
+          "cached_steps": 3,
+          "identity": {
+            "role": "exporter",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494746.6113029
+          }
+        },
+        {
+          "role": "observer",
+          "image_tag": "gamebuildlab/observer:bbb34456e24f-8036828087-warm",
+          "image_id": "sha256:c432b5db2edeed6290a17310c15ae898e8f48f4aa5ff33360cae9ac77ae82fb8",
+          "seconds": 6.594,
+          "cached_steps": 3,
+          "identity": {
+            "role": "observer",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v1",
+            "started": 1792494755.6781015
+          }
+        }
+      ]
+    },
+    {
+      "name": "app_change",
+      "seconds": 22.437,
+      "targets": [
+        {
+          "role": "core",
+          "image_tag": "gamebuildlab/core:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:0cdc5c3872ca0daa0e4b6a3789fc7d348c7681791d5e10a4cfb6e7f971a06768",
+          "seconds": 4.437,
+          "cached_steps": 2,
+          "identity": {
+            "role": "core",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494762.5839438
+          }
+        },
+        {
+          "role": "edge",
+          "image_tag": "gamebuildlab/edge:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:ca33e23a0f32ec23b3c634cd16f91ac48c91aa526d846a7a4b20c5317636d78a",
+          "seconds": 3.438,
+          "cached_steps": 3,
+          "identity": {
+            "role": "edge",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494768.117568
+          }
+        },
+        {
+          "role": "collector",
+          "image_tag": "gamebuildlab/collector:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:3a5e526212b97fdb1bae7fe8ed7e45bfe6865f8aaff62f440bbc48827ad4aec7",
+          "seconds": 2.719,
+          "cached_steps": 3,
+          "identity": {
+            "role": "collector",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494772.7962341
+          }
+        },
+        {
+          "role": "processor",
+          "image_tag": "gamebuildlab/processor:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:aca82e309c142e71d093d612492bbd61e0d2db08624f81593d06074be78aab6a",
+          "seconds": 2.25,
+          "cached_steps": 3,
+          "identity": {
+            "role": "processor",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494776.9969778
+          }
+        },
+        {
+          "role": "gateway",
+          "image_tag": "gamebuildlab/gateway:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:73a1bf1c7bd990e9ff5e5c912f3fc5c3c0c627ab10e445f0509ceaf15a451888",
+          "seconds": 2.485,
+          "cached_steps": 3,
+          "identity": {
+            "role": "gateway",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494781.1311398
+          }
+        },
+        {
+          "role": "scheduler",
+          "image_tag": "gamebuildlab/scheduler:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:c5037b0a5e5af03a9ead90613f10b7e6977c16212c23047ef1f9a00c26cbc7a9",
+          "seconds": 2.437,
+          "cached_steps": 3,
+          "identity": {
+            "role": "scheduler",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494785.4991083
+          }
+        },
+        {
+          "role": "exporter",
+          "image_tag": "gamebuildlab/exporter:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:f8ce8de40364d075ea8d509ed57ef7cd4f66b968a2eb55a5fd3823e6f28e8d21",
+          "seconds": 2.031,
+          "cached_steps": 3,
+          "identity": {
+            "role": "exporter",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494789.3583405
+          }
+        },
+        {
+          "role": "observer",
+          "image_tag": "gamebuildlab/observer:bbb34456e24f-8036828087-app_change",
+          "image_id": "sha256:9d275a132d998586034b881caa98c2b50ba4498c9262108f5ada4ab485c93cfc",
+          "seconds": 2.64,
+          "cached_steps": 3,
+          "identity": {
+            "role": "observer",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494793.83635
+          }
+        }
+      ]
+    },
+    {
+      "name": "dependency_change",
+      "seconds": 22.969,
+      "targets": [
+        {
+          "role": "core",
+          "image_tag": "gamebuildlab/core:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:97dbacdf54bf60b3b963eb6b590bab2f9659837c197ed81c601b48fb66824877",
+          "seconds": 6.359,
+          "cached_steps": 2,
+          "identity": {
+            "role": "core",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494803.165594
+          }
+        },
+        {
+          "role": "edge",
+          "image_tag": "gamebuildlab/edge:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:55fc65b3b4ed6924b8431735386dce32596ed69135072e89294bc9004ffdcda1",
+          "seconds": 3.0,
+          "cached_steps": 3,
+          "identity": {
+            "role": "edge",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494808.2638664
+          }
+        },
+        {
+          "role": "collector",
+          "image_tag": "gamebuildlab/collector:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:a63c7de4ba9d749bcf14e7c753090bd1ad80deaa3e7275bbec0e117d1e2847d9",
+          "seconds": 2.875,
+          "cached_steps": 3,
+          "identity": {
+            "role": "collector",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494813.2196474
+          }
+        },
+        {
+          "role": "processor",
+          "image_tag": "gamebuildlab/processor:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:14c217646a6b1e1afa17a551756b3cc0987e2616e9b4a1709b8ba937f31ee21b",
+          "seconds": 1.938,
+          "cached_steps": 3,
+          "identity": {
+            "role": "processor",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494816.8965101
+          }
+        },
+        {
+          "role": "gateway",
+          "image_tag": "gamebuildlab/gateway:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:16fe6517cb8c0842669968db6afa3bd7351525f87688f0a3e6dcccc92505eaeb",
+          "seconds": 2.25,
+          "cached_steps": 3,
+          "identity": {
+            "role": "gateway",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494821.090906
+          }
+        },
+        {
+          "role": "scheduler",
+          "image_tag": "gamebuildlab/scheduler:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:240b99aeb5c5ee4d5f68e6c526d462771f586c63cb243877a7912dba5d621f1b",
+          "seconds": 2.172,
+          "cached_steps": 3,
+          "identity": {
+            "role": "scheduler",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494825.4565048
+          }
+        },
+        {
+          "role": "exporter",
+          "image_tag": "gamebuildlab/exporter:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:4dd9b502d59b101ab9d6bfc64daf23b4000ae0887674d289f2e5694ba022e56a",
+          "seconds": 2.484,
+          "cached_steps": 3,
+          "identity": {
+            "role": "exporter",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494829.4774268
+          }
+        },
+        {
+          "role": "observer",
+          "image_tag": "gamebuildlab/observer:bbb34456e24f-8036828087-dependency_change",
+          "image_id": "sha256:0973b56725f7c012d45c712fd1b2becbff822c2a55592aa926cc65f9baa77dd1",
+          "seconds": 1.891,
+          "cached_steps": 3,
+          "identity": {
+            "role": "observer",
+            "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+            "config": "v1",
+            "app_revision": "v2",
+            "started": 1792494832.8536267
+          }
+        }
+      ]
+    }
+  ]
+}

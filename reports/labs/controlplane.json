@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "unauthenticated_status": 401,
+  "job_id": "20261020T111722Z-00e2a66e-1ecf432f4c",
+  "before": "queued",
+  "after_restart": "queued",
+  "persistence": "Linux project-owned control_data volume"
+}

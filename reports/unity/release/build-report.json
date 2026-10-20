@@ -1,0 +1,36 @@
+{
+  "adapter": "unity",
+  "status": "passed",
+  "result": "Succeeded",
+  "build_id": "unity-release-20261020",
+  "commit_sha": "b77deca57e09f0bc413563d20f6392889742823d",
+  "input_digest": "8343662ce2a3ea38f80facef58dceb01b8b5d7e2629827f113c1bfca83ad156a",
+  "unity_version": "6000.3.0f1",
+  "target": "StandaloneWindows64",
+  "configuration": "Release",
+  "started_at": "2026-10-20T11:24:06.0618348Z",
+  "duration_seconds": 4.9950418,
+  "total_size": 88320295,
+  "total_errors": 0,
+  "total_warnings": 0,
+  "error": "",
+  "issues": [],
+  "resource_dependencies": [
+    "Assets/BundleSource/demo-config.json"
+  ],
+  "resource_inputs": [
+    {
+      "path": "Assets/BundleSource/demo-config.json",
+      "sha256": "974bfe3edcc0927ee6936f0aa641d4f84539d05006178094fc2fe40ca8f0de58",
+      "meta_sha256": "68f9754bc11495e17e648ce12fc5006d6d30deb51bc10ac2f58e2fe17d4888e6"
+    }
+  ],
+  "resource_input_digest": "11b12529d1a1745681327b8cf59ca459c4625d4b58450270bd12f91aa0339575",
+  "exporter_version": "gamebuild-bundle-v1",
+  "exporter_sha256": "a3c6c3e8375c99b8cacb06310c41b0e3909f365941359edec23a0c3581778820",
+  "resource_cache_hit": true,
+  "resource_cache_lookup_seconds": 0.0295137,
+  "resource_export_seconds": 0.0,
+  "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9",
+  "bundle_bytes": 1236
+}

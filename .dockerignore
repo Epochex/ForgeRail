@@ -1,0 +1,13 @@
+.git
+.venv
+.runtime
+runtime
+downloads
+.pytest_cache
+**/__pycache__
+reports
+unity/**/Library
+unity/**/Temp
+unity/**/Logs
+*.zip
+*.tar

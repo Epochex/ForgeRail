@@ -1,0 +1,34 @@
+pipeline {
+  agent { label 'linux-lab' }
+  options { timeout(time: 15, unit: 'MINUTES') }
+  parameters { booleanParam(name: 'RUN_UNITY', defaultValue: true, description: 'Submit a real Windows Unity Player job to the registered Windows node') }
+  environment { PYTHONPATH = '/workspace/src'; PYTHONPYCACHEPREFIX = '/tmp/gamebuild-python-cache' }
+  stages {
+    stage('Source identity') { steps { deleteDir(); sh 'python /workspace/labs/source_identity.py' } }
+    stage('Python validation') { steps { sh 'cd /workspace && python -m pytest tests -q -o cache_dir=/tmp/gamebuild-pytest-cache > /reports/labs/jenkins-pytest.txt' } }
+    stage('Control plane and two logical nodes') { steps { sh 'python -m gamebuild.cli demo --root /tmp/gamebuild-jenkins-demo --report /reports/labs/jenkins-demo.json' } }
+    stage('Unity Windows Player') {
+      when { expression { params.RUN_UNITY } }
+      steps {
+        sh '''
+          set -eu
+          UNITY_SOURCE=$(mktemp -d /tmp/gamebuild-unity-source.XXXXXX)
+          SOURCE_SHA=$(python -c "import json;print(json.load(open('/reports/labs/jenkins-source.json'))['commit_sha'])")
+          git -c safe.directory=/workspace clone --no-hardlinks /workspace "$UNITY_SOURCE"
+          git -C "$UNITY_SOURCE" checkout --detach "$SOURCE_SHA"
+          python -m gamebuild.cli submit --url http://controlplane:8000 --repo "$UNITY_SOURCE" --adapter unity --project buildlab --wait --report /reports/labs/jenkins-unity-job.json
+          python /workspace/labs/archive_unity.py
+        '''
+      }
+    }
+    stage('Environment diagnostics') { steps { sh 'python -m gamebuild.cli doctor --report /reports/labs/jenkins-doctor.json' } }
+    stage('Container evidence') { steps { sh 'python /workspace/labs/check_docker_evidence.py' } }
+  }
+  post {
+    always {
+      sh 'mkdir -p evidence; cp -r /reports/labs/* evidence/ || true'
+      catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') { sh 'python /workspace/labs/archive_demo.py' }
+      archiveArtifacts artifacts: 'evidence/**', allowEmptyArchive: true, fingerprint: true
+    }
+  }
+}

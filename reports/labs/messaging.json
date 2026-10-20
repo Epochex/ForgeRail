@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "events_per_namespace": 12,
+  "side_effect_isolation": true,
+  "environments": {
+    "stable": {
+      "topic": "gamebuildlab-stable-5d93b70223",
+      "group": "gamebuildlab-stable-5d93b70223-consumer",
+      "ledger": "stable.sqlite",
+      "crash_exit": 23,
+      "delivered": 12,
+      "duplicates": 1,
+      "summary": {
+        "unique": 12,
+        "total": 66,
+        "checkpoint": 11
+      }
+    },
+    "shadow": {
+      "topic": "gamebuildlab-shadow-5d93b70223",
+      "group": "gamebuildlab-shadow-5d93b70223-consumer",
+      "ledger": "shadow.sqlite",
+      "crash_exit": 23,
+      "delivered": 12,
+      "duplicates": 1,
+      "summary": {
+        "unique": 12,
+        "total": 1266,
+        "checkpoint": 11
+      }
+    }
+  },
+  "ledger_volume": "gamebuildlab_ledger_5d93b70223"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "reason": "Actual Unity Editor resource checks, Windows Mono Player and runtime AssetBundle smoke, two real branches in parallel, immutable export-cache recovery and visible Player verified",
+  "recorded_at": "2026-10-20T11:26:04.019417+00:00",
+  "source_commit": "b77deca57e09f0bc413563d20f6392889742823d",
+  "editor": {
+    "path": "<workspace>\\runtime\\tools\\unity\\6000.3.0f1\\Editor\\Unity.exe",
+    "version": "6000.3.0f1",
+    "revision": "d1870ce95baf",
+    "product_version": "6000.3.0f1_d1870ce95baf"
+  },
+  "license": {
+    "status": "available_by_actual_batch_execution",
+    "human_login_required": false
+  },
+  "player_build": {
+    "status": "passed",
+    "configuration": "Release",
+    "editor_exit_code": 0,
+    "report": "reports/unity/release/build-report.json",
+    "log": "reports/unity/release/editor.log",
+    "output_dir": "<workspace>\\runtime\\unity-output-release"
+  },
+  "player_smoke": {
+    "status": "passed",
+    "exit_code": 0,
+    "receipt": "reports/unity/release/smoke-receipt.json",
+    "asset_loaded": true
+  },
+  "editor_checks": {
+    "status": "passed",
+    "exit_code": 0,
+    "engine_tests": 3,
+    "report": "reports/unity/editor-acceptance-fixed/editor-tests.json",
+    "log": "reports/unity/editor-acceptance-fixed/editor.log"
+  },
+  "api_compile": {
+    "status": "passed",
+    "evidence": "reports/unity/contracts-green.txt",
+    "scope": "dotnet reference compilation against installed official Unity assemblies; separate from actual Editor execution"
+  },
+  "export_cache": {
+    "status": "passed",
+    "evidence": "reports/unity/export-cache.json"
+  },
+  "parallel": {
+    "status": "passed",
+    "evidence": "reports/unity/parallel.json",
+    "scope": "two logical builds on one Windows host; not cross-host acceptance"
+  },
+  "visible_player": {
+    "status": "passed",
+    "evidence": "reports/unity/visual.json",
+    "screenshot": "reports/unity/player-window.png"
+  },
+  "attempt_notes": [
+    "First engine attempt found an invalid inputlegacy package reference; removed after inspecting actual built-in package inventory. Subsequent real Editor and Player runs passed.",
+    "Headless entitlement warning was nonfatal; wrapper classification was narrowed to avoid reporting it as a missing license.",
+    "Development runs can trigger Windows firewall prompts; no firewall rules or access permissions were changed. Release build was used for final visible verification."
+  ]
+}

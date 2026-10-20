@@ -1,0 +1,408 @@
+{
+  "status": "passed",
+  "build_number": 2,
+  "url": "http://127.0.0.1:18980/job/gamebuild-lab/2/",
+  "result": "SUCCESS",
+  "controller_executors": 0,
+  "anonymous_access_rejected": true,
+  "agent": "linux-lab",
+  "nodes": {
+    "_class": "hudson.model.ComputerSet",
+    "computer": [
+      {
+        "_class": "hudson.model.Hudson$MasterComputer",
+        "displayName": "Built-In Node",
+        "offline": false
+      },
+      {
+        "_class": "hudson.slaves.SlaveComputer",
+        "displayName": "linux-lab",
+        "offline": false
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-collector.log",
+      "relativePath": "evidence/build-app_change-collector.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-core.log",
+      "relativePath": "evidence/build-app_change-core.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-edge.log",
+      "relativePath": "evidence/build-app_change-edge.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-exporter.log",
+      "relativePath": "evidence/build-app_change-exporter.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-gateway.log",
+      "relativePath": "evidence/build-app_change-gateway.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-observer.log",
+      "relativePath": "evidence/build-app_change-observer.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-processor.log",
+      "relativePath": "evidence/build-app_change-processor.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-app_change-scheduler.log",
+      "relativePath": "evidence/build-app_change-scheduler.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-collector.log",
+      "relativePath": "evidence/build-cold-collector.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-core.log",
+      "relativePath": "evidence/build-cold-core.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-edge.log",
+      "relativePath": "evidence/build-cold-edge.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-exporter.log",
+      "relativePath": "evidence/build-cold-exporter.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-gateway.log",
+      "relativePath": "evidence/build-cold-gateway.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-observer.log",
+      "relativePath": "evidence/build-cold-observer.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-processor.log",
+      "relativePath": "evidence/build-cold-processor.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-cold-scheduler.log",
+      "relativePath": "evidence/build-cold-scheduler.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-collector.log",
+      "relativePath": "evidence/build-dependency_change-collector.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-core.log",
+      "relativePath": "evidence/build-dependency_change-core.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-edge.log",
+      "relativePath": "evidence/build-dependency_change-edge.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-exporter.log",
+      "relativePath": "evidence/build-dependency_change-exporter.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-gateway.log",
+      "relativePath": "evidence/build-dependency_change-gateway.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-observer.log",
+      "relativePath": "evidence/build-dependency_change-observer.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-processor.log",
+      "relativePath": "evidence/build-dependency_change-processor.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-dependency_change-scheduler.log",
+      "relativePath": "evidence/build-dependency_change-scheduler.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-collector.log",
+      "relativePath": "evidence/build-warm-collector.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-core.log",
+      "relativePath": "evidence/build-warm-core.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-edge.log",
+      "relativePath": "evidence/build-warm-edge.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-exporter.log",
+      "relativePath": "evidence/build-warm-exporter.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-gateway.log",
+      "relativePath": "evidence/build-warm-gateway.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-observer.log",
+      "relativePath": "evidence/build-warm-observer.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-processor.log",
+      "relativePath": "evidence/build-warm-processor.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-warm-scheduler.log",
+      "relativePath": "evidence/build-warm-scheduler.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "controller-build-final.log",
+      "relativePath": "evidence/controller-build-final.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "controller-build-locked.log",
+      "relativePath": "evidence/controller-build-locked.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "controlplane.json",
+      "relativePath": "evidence/controlplane.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "artifact-74cf4376edfb4710b36088a2778b2219.manifest.json",
+      "relativePath": "evidence/demo/artifact-74cf4376edfb4710b36088a2778b2219.manifest.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "artifact-74cf4376edfb4710b36088a2778b2219.zip",
+      "relativePath": "evidence/demo/artifact-74cf4376edfb4710b36088a2778b2219.zip"
+    },
+    {
+      "displayPath": null,
+      "fileName": "artifact-c7203dff1f1745c3bed28f695e6d756b.manifest.json",
+      "relativePath": "evidence/demo/artifact-c7203dff1f1745c3bed28f695e6d756b.manifest.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "artifact-c7203dff1f1745c3bed28f695e6d756b.zip",
+      "relativePath": "evidence/demo/artifact-c7203dff1f1745c3bed28f695e6d756b.zip"
+    },
+    {
+      "displayPath": null,
+      "fileName": "server.log",
+      "relativePath": "evidence/demo/server.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "worker-0.log",
+      "relativePath": "evidence/demo/worker-0.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "worker-1.log",
+      "relativePath": "evidence/demo/worker-1.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "environment.json",
+      "relativePath": "evidence/environment.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "images.json",
+      "relativePath": "evidence/images.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "infra-build-final.log",
+      "relativePath": "evidence/infra-build-final.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "infra-build.log",
+      "relativePath": "evidence/infra-build.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-1-console.txt",
+      "relativePath": "evidence/jenkins-1-console.txt"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-1.json",
+      "relativePath": "evidence/jenkins-1.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-console.txt",
+      "relativePath": "evidence/jenkins-console.txt"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-demo.json",
+      "relativePath": "evidence/jenkins-demo.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-doctor.json",
+      "relativePath": "evidence/jenkins-doctor.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-plugins.json",
+      "relativePath": "evidence/jenkins-plugins.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-pytest.txt",
+      "relativePath": "evidence/jenkins-pytest.txt"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-source.json",
+      "relativePath": "evidence/jenkins-source.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-unity-job.json",
+      "relativePath": "evidence/jenkins-unity-job.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins-unity-verification.json",
+      "relativePath": "evidence/jenkins-unity-verification.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "jenkins.json",
+      "relativePath": "evidence/jenkins.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "messaging.json",
+      "relativePath": "evidence/messaging.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "offline-incomplete-load.log",
+      "relativePath": "evidence/offline-incomplete-load.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "offline-load.log",
+      "relativePath": "evidence/offline-load.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "runtime.json",
+      "relativePath": "evidence/runtime.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "services.json",
+      "relativePath": "evidence/services.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "shadow-crash.log",
+      "relativePath": "evidence/shadow-crash.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "shadow-restart.log",
+      "relativePath": "evidence/shadow-restart.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "stable-crash.log",
+      "relativePath": "evidence/stable-crash.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "stable-restart.log",
+      "relativePath": "evidence/stable-restart.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "tdd-green.txt",
+      "relativePath": "evidence/tdd-green.txt"
+    },
+    {
+      "displayPath": null,
+      "fileName": "tdd-red.txt",
+      "relativePath": "evidence/tdd-red.txt"
+    },
+    {
+      "displayPath": null,
+      "fileName": "tools-build-final.log",
+      "relativePath": "evidence/tools-build-final.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "tools-build-locked.log",
+      "relativePath": "evidence/tools-build-locked.log"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-info.json",
+      "relativePath": "evidence/unity/build-info.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "build-report.json",
+      "relativePath": "evidence/unity/build-report.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "manifest.json",
+      "relativePath": "evidence/unity/manifest.json"
+    },
+    {
+      "displayPath": null,
+      "fileName": "package.zip",
+      "relativePath": "evidence/unity/package.zip"
+    },
+    {
+      "displayPath": null,
+      "fileName": "smoke.json",
+      "relativePath": "evidence/unity/smoke.json"
+    }
+  ],
+  "duration_ms": 91873,
+  "unity": {
+    "job_id": "20261020T113051Z-6c1207e8-a3842143f1",
+    "artifact_id": "artifact-c1c8fca8b7654a2da3e011155045fd9c",
+    "archive_sha256_verified": "c5980d289cbb08cbb8aeb741eb904ce1a755eaf35253c6acd2d62e41f4f8ba4e",
+    "archive_bytes": 32632400
+  }
+}

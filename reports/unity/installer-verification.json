@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "source_url": "https://download.unity3d.com/download_unity/d1870ce95baf/Windows64EditorInstaller/UnitySetup64-6000.3.0f1.exe",
+  "version": "6000.3.0f1",
+  "revision": "d1870ce95baf",
+  "bytes": 4131048704,
+  "sha256": "1629b8e701ad1b4f5576d6f912fcc1e82aaacee56bfbafa75a4d3eb62a1190ac",
+  "signature_status": "Valid",
+  "publisher": "CN=Unity Technologies SF, O=Unity Technologies SF, L=San Francisco, S=California, C=US, SERIALNUMBER=3183233, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.2=California, OID.1.3.6.1.4.1.311.60.2.1.3=US",
+  "checked_at": "2026-10-20T11:21:31.7662212Z"
+}

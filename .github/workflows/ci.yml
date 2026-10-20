@@ -1,0 +1,44 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  core:
+    name: Core / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - name: Install locked dependencies
+        run: |
+          python -m pip install -r requirements.lock
+          python -m pip install --no-deps -e .
+      - name: Core and available contract tests
+        run: python -m pytest -q --junitxml=runtime/ci-pytest.xml
+      - name: Real HTTP and worker demo
+        run: python -m gamebuild.cli demo --root runtime/ci-demo --report runtime/ci-demo.json
+      - name: Preserve small test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-${{ matrix.os }}
+          path: |
+            runtime/ci-pytest.xml
+            runtime/ci-demo.json
+          if-no-files-found: ignore

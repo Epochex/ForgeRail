@@ -1,0 +1,23 @@
+{
+  "idem": "feature-release-20261020",
+  "request": {
+    "adapter": "unity",
+    "branch": "origin/feature/resource-change",
+    "build_script_version": "1",
+    "commit_sha": "1c39e8b1b5fbf025865752d95a393623d2f8b880",
+    "configuration": "Release",
+    "input_digest": "8133c8c2810c27ea2833d30ce3e42d84e28be4934321c6ceb1f001949b578c1e",
+    "project_id": "buildlab",
+    "target": "StandaloneWindows64",
+    "unity_version": "6000.3.0f1"
+  },
+  "state": "succeeded",
+  "attempt": 1,
+  "worker": "windows-unity",
+  "token": null,
+  "expiry": null,
+  "detail": "",
+  "created": 1792496004.1799169,
+  "job_id": "20261020T113324Z-1c39e8b1-3e78ab4913",
+  "artifact_id": "artifact-34e281ec867a422dadc617116bb2ebf4"
+}

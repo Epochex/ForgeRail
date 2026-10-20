@@ -1,0 +1,11 @@
+{
+  "adapter": "unity",
+  "build_id": "unity-parallel-base-20261020",
+  "commit_sha": "b77deca57e09f0bc413563d20f6392889742823d",
+  "input_digest": "1af1d173a6689333c4fe3c3f344579cc8d543a050aa4e526e4a07ca509a099e3",
+  "target": "StandaloneWindows64",
+  "configuration": "Development",
+  "unity_version": "6000.3.0f1",
+  "config_sha256": "974bfe3edcc0927ee6936f0aa641d4f84539d05006178094fc2fe40ca8f0de58",
+  "bundle_sha256": "6a00dbcba5b2f4e605b26ae1460b2cdd0c3debb285f268bce5c653b7177d03b9"
+}

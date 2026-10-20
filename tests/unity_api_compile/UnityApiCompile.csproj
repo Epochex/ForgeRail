@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>netstandard2.1</TargetFramework><EnableDefaultCompileItems>false</EnableDefaultCompileItems><GenerateAssemblyInfo>false</GenerateAssemblyInfo><Nullable>disable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../unity/BuildLab/Assets/**/*.cs"/>
+    <Reference Include="$(UnityManagedPath)/UnityEngine.dll"/>
+    <Reference Include="$(UnityManagedPath)/UnityEngine/*.dll"/>
+  </ItemGroup>
+  <Target Name="RequireOfficialUnityReferences" BeforeTargets="ResolveReferences" Condition="!Exists('$(UnityManagedPath)/UnityEngine/UnityEngine.CoreModule.dll')">
+    <Error Text="Pass -p:UnityManagedPath=&lt;official-editor&gt;/Data/Managed. This check is API reference compilation, not Unity Editor execution."/>
+  </Target>
+</Project>

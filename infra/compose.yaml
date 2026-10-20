@@ -1,0 +1,60 @@
+name: gamebuildlab
+services:
+  secret-init:
+    image: python@sha256:2c285c669cc837aa3bcf1af23ea1932b7b5214f9c9d3aad22417446ad91cb4fb
+    command: ['python','-c','import os; os.chown("/shared",1000,1000); os.chmod("/shared",0o700)']
+    volumes: ['agent_secret:/shared']
+  jenkins:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.jenkins
+    image: gamebuildlab-jenkins
+    environment:
+      JAVA_OPTS: '-Djenkins.install.runSetupWizard=false -Xmx768m'
+      JENKINS_PASSWORD: ${JENKINS_PASSWORD:?generate local credentials}
+    ports: ['127.0.0.1:${JENKINS_PORT:-18980}:8080']
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - agent_secret:/shared
+      - ../:/workspace:ro
+    mem_limit: 1536m
+    depends_on:
+      secret-init:
+        condition: service_completed_successfully
+  agent:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.tools
+    image: gamebuildlab-tools
+    environment:
+      GAMEBUILD_TOKEN: ${GAMEBUILD_TOKEN:?generate local credentials}
+    volumes:
+      - agent_secret:/shared:ro
+      - agent_home:/home/agent
+      - ../:/workspace:ro
+      - ../reports:/reports
+    depends_on: [jenkins]
+    tmpfs: ['/workspace/.runtime:mode=0700']
+    mem_limit: 1024m
+  controlplane:
+    image: gamebuildlab-tools
+    command: ['python','-m','gamebuild.cli','serve','--root','/data','--host','0.0.0.0','--port','8000']
+    environment:
+      GAMEBUILD_TOKEN: ${GAMEBUILD_TOKEN}
+    ports: ['127.0.0.1:${API_PORT:-18981}:8000']
+    volumes:
+      - control_data:/data
+      - ../:/workspace:ro
+    mem_limit: 512m
+    tmpfs: ['/workspace/.runtime:mode=0700']
+  redpanda:
+    image: redpandadata/redpanda@sha256:bd6c35647153a4dbc19507c8037dcca0802484c23e6e5fbb97591a62539e313a
+    command: ['redpanda','start','--overprovisioned','--smp','1','--memory','512M','--reserve-memory','0M','--node-id','0','--check=false','--kafka-addr','PLAINTEXT://0.0.0.0:9092','--advertise-kafka-addr','PLAINTEXT://redpanda:9092','--mode','dev-container']
+    volumes: ['redpanda_data:/var/lib/redpanda/data']
+    mem_limit: 768m
+volumes:
+  jenkins_home:
+  agent_secret:
+  agent_home:
+  control_data:
+  redpanda_data:

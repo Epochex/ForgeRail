@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "offline_sha256": "a31acfcb4dcd54311dea20247226dee471cf4990a597b4a008b1a53dda120156",
+  "incomplete_import_exit": 1,
+  "incomplete_import_target_absent": true,
+  "offline_import": "docker save; target tag removed and absence checked; truncated archive rejected; docker load restores identical ID; --pull=never runtime",
+  "services": [
+    {
+      "role": "core",
+      "container_image": "sha256:f9a6bb9d700f05510f67d34d3851c29333203b9aeff27ad075a6bd71f0fb4733",
+      "runtime": {
+        "role": "core",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494980.2987576
+      },
+      "drift_runtime": {
+        "role": "core",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "bad",
+        "app_revision": "v1",
+        "started": 1792494982.7515857
+      },
+      "config_drift_rejected": true,
+      "wrong_image_rejected": true,
+      "missing_module_exit": 1,
+      "stable_restored": {
+        "role": "core",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494985.1732984
+      }
+    },
+    {
+      "role": "edge",
+      "container_image": "sha256:43111743fa3a5e96bc7ff328010a4f02f5c1ed1768db0cbb38332f2b12e65c0f",
+      "runtime": {
+        "role": "edge",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494986.8341517
+      },
+      "drift_runtime": {
+        "role": "edge",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "bad",
+        "app_revision": "v1",
+        "started": 1792494988.5774214
+      },
+      "config_drift_rejected": true,
+      "wrong_image_rejected": true,
+      "missing_module_exit": 1,
+      "stable_restored": {
+        "role": "edge",
+        "sha": "bbb34456e24f9bcda73fc2062cdf14edf107226b",
+        "config": "v1",
+        "app_revision": "v1",
+        "started": 1792494990.9070234
+      }
+    }
+  ],
+  "k3d": {
+    "status": "not_run",
+    "reason": "optional; no isolated Kubernetes execution performed"
+  },
+  "systemd": {
+    "status": "not_run",
+    "reason": "Docker execution is not systemd validation"
+  }
+}

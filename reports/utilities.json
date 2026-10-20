@@ -1,0 +1,48 @@
+{
+  "task": 2,
+  "status": "passed",
+  "scope": "resource checks, immutable content cache, process trees and deterministic diagnostics",
+  "platform": "Windows",
+  "python": "3.11",
+  "tdd": {
+    "initial_red": {
+      "failed": 37,
+      "reason": "Utility implementation modules absent"
+    },
+    "regression_red": [
+      "Cache admitted symbolic link source and writes into its own root",
+      "Slow-trickling HTTP headers exceeded total deadline",
+      "HTTP retry used first resolved address family instead of successfully connected family"
+    ],
+    "targeted_green": {
+      "passed": 42,
+      "duration_seconds": 8.18,
+      "exit_code": 0
+    }
+  },
+  "targeted_command": "PYTHONPATH=src python -m pytest tests/test_checks.py tests/test_cache.py tests/test_runner.py tests/test_diagnostics.py -q",
+  "whole_suite_at_handoff": {
+    "status": "failed",
+    "command": "PYTHONPATH=src python -m pytest -q",
+    "exit_code": 1,
+    "error": "tests/test_worker.py collection: ModuleNotFoundError: No module named 'gamebuild.cli'",
+    "reason": "Task 4 integration implementation was still in progress"
+  },
+  "real_behavior": [
+    "NTFS file and directory metadata checks and case mismatch",
+    "File-byte dependency invalidation, verified cache restore, immutable conflict and corruption quarantine",
+    "Symbolic-link source and cache-root recursion rejection",
+    "Real exit code 7 and merged stdout/stderr",
+    "5 MB stdout drained with retained log capped at 1 MiB",
+    "Windows Job Object parent/child/grandchild cancellation and timeout",
+    "Parent-exit background descendant cleanup",
+    "Local TCP refusal and HTTP success, 503, response timeout and slow-header deadline",
+    "localhost IPv6/IPv4 fallback"
+  ],
+  "not_run": [
+    "POSIX process-group lifecycle",
+    "Unity semantic asset checks",
+    "Unity license/build-module preflight"
+  ],
+  "details": "docs/utilities.md"
+}
