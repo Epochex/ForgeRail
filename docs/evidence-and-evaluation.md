@@ -14,6 +14,8 @@
 
 原始本机输出位于 `runtime/ux-contracts-final.log`、`runtime/ux-unit-final.log`、`runtime/ux-e2e-final.log`、`runtime/ux-focused-final.log` 及批次目录。页面仍可查看用户原来的历史 run，无需重新制造一份成功结果。
 
+远端 [CI 39937829980](https://github.com/Epochex/ForgeRail/actions/runs/39937829980) 对代码提交 `c1d4714056b9054cc04837d1560553ac65aa570a` 验证：Ubuntu 176 passed / 3 skipped，Chromium 25 passed，前端观察投影 3 passed。Windows 首轮 174 passed / 2 skipped / 3 failed，失败项均为已有 .NET/PowerShell 入口契约的子进程超时；未运行 Unity。本机原样复测这三项 3 passed / 1 references check skipped（6.01 秒），未修改代码或超时阈值，仅重跑失败的 CI 作业，得到 Windows 177 passed / 2 skipped（233.96 秒），HTTP worker 演示也通过。相同提交复跑通过不能证明首次超时的具体环境根因，初次失败记录保留，不能把它声称为首跑全绿。
+
 ## 效果如何判定
 
 每个故障变体是一个样本，固定 16 类、41 个变体。执行 `python scripts/evaluate_lab.py --root runtime/interactive-lab` 后，脚本调用 `tests/test_lab_scenarios.py::test_every_variant_closes_real_loop` 的完整参数集。没有挑选成功历史，也没有自动重试取最好值。
