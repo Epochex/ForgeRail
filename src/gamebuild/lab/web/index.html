@@ -1,68 +1,58 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#141719">
-  <title>ForgeRail · 游戏构建工程实验台</title>
-  <link rel="stylesheet" href="/lab/static/workbench.css">
-  <script type="module" src="/lab/static/app.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#141719"><title>ForgeRail · 游戏构建工程实验台</title>
+<link rel="stylesheet" href="/lab/static/workbench.css"><script type="module" src="/lab/static/app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#workspace">跳至实验工作区</a>
-  <div class="app" data-testid="workbench" data-phase="" data-run-id="">
-    <aside class="sidebar" aria-label="实验场景">
-      <a class="brand" href="/" aria-label="ForgeRail 工作台"><span class="brand-mark">F<span>R</span></span><span>FORGERAIL<small>GAME BUILD ENGINEERING</small></span></a>
-      <div class="sidebar-heading"><span>实验目录</span><span id="case-count" class="mono">16 CASES</span></div>
-      <label class="search-label"><span class="sr-only">搜索场景</span><input data-testid="case-search" id="case-search" type="search" placeholder="搜索场景、机制或角色…" autocomplete="off"></label>
-      <label class="role-label"><span>学习角色</span><select aria-label="角色筛选" id="role-filter"><option value="">全部角色</option><option>程序</option><option>美术</option><option>QA</option><option>构建工程师</option></select></label>
-      <nav id="case-list" aria-label="场景目录"><p class="empty">正在读取实验目录…</p></nav>
-      <div class="sidebar-footer"><span class="live-dot"></span> 本机执行 · 独立实验空间 <span class="badge">Lab</span></div>
-    </aside>
-    <div class="main-shell">
-      <header class="topbar"><span>工作台 <span class="slash">/</span> <span id="breadcrumb">构建工程</span></span><span class="topbar-mode"><span class="live-dot"></span> LOCAL LAB <span class="version">v0.1</span></span></header>
-      <main id="workspace" tabindex="-1">
-        <div class="error-banner" id="error-banner" role="alert" hidden><span id="error-text"></span><button id="retry" class="text-button" type="button">重试连接</button></div>
-        <section class="case-intro" aria-labelledby="case-title">
-          <div class="eyebrow" id="case-eyebrow">ENGINEERING PLAYGROUND / 01</div>
-          <div class="title-row"><h1 id="case-title">游戏构建工程实验台</h1><span class="badge lab-badge">Lab</span></div>
-          <p id="case-description" class="case-description">从一次真实故障开始，沿着证据理解构建与交付。</p>
-          <div class="impact-line"><span>业务影响</span><p id="case-impact">正在读取场景…</p></div>
-        </section>
-        <section class="control-bar" aria-label="实验控制">
-          <label class="variant-label">故障变体<select data-testid="fault-variant" id="fault-variant"></select></label>
-          <div class="control-actions"><button data-testid="new-run" id="new-run" class="button secondary" type="button">新建实验</button><button data-testid="run-all" id="run-all" class="button primary" type="button"><span class="play-glyph" aria-hidden="true">▶</span> 完整演练</button></div>
-        </section>
-        <div class="workspace-grid">
-          <div class="experiment-column">
-            <section class="panel workflow-panel" aria-labelledby="workflow-title">
-              <div class="section-heading"><div><span class="eyebrow">01 / WORKFLOW</span><h2 id="workflow-title">故障到修复，六步闭环</h2></div><span id="workflow-count" class="mono muted">0 / 6</span></div>
-              <div class="run-state"><span class="status-dot" id="status-dot"></span><strong data-testid="run-status" id="run-status" aria-live="polite">等待创建实验</strong><span id="run-short-id" class="mono muted">NO RUN</span><button data-testid="cancel-run" id="cancel-run" class="text-button danger" disabled type="button">停止执行</button></div>
-              <ol class="steps" id="steps"></ol>
-              <p class="workflow-note" id="workflow-note">新建独立空间后，可逐步操作，也可完整演练。每一步均实际调用本机执行器。</p>
-            </section>
-            <section class="panel checks-panel" data-testid="checks" aria-labelledby="checks-title">
-              <div class="section-heading"><div><span class="eyebrow">02 / ASSERTIONS</span><h2 id="checks-title">断言与结果</h2></div><span id="checks-count" class="mono muted">—</span></div>
-              <div id="result-heading"></div><div id="check-list" class="check-list"><p class="empty">运行流程后，在这里查看预期与实测值。执行阶段发现故障，复验阶段验证修复。</p></div>
-              <div id="comparison"></div>
-            </section>
-            <section class="panel timeline-panel" aria-labelledby="timeline-title"><div class="section-heading"><div><span class="eyebrow">03 / MEASURED TRACE</span><h2 id="timeline-title">实测阶段时间线</h2></div><span class="badge">实测 ms</span></div><div id="timeline"><p class="empty">等待执行事件。仅展示执行器实际记录的时间，不预估进度。</p></div></section>
-            <section class="panel learning-panel" aria-labelledby="learning-title"><div class="section-heading"><div><span class="eyebrow">04 / ENGINEERING NOTES</span><h2 id="learning-title">把证据变成工程判断</h2></div></div><div id="learning"></div></section>
-          </div>
-          <aside class="evidence-column panel" data-testid="evidence-panel" aria-labelledby="evidence-title">
-            <div class="evidence-header"><div><span class="eyebrow">LIVE EVIDENCE</span><h2 id="evidence-title">执行证据</h2></div><span class="badge lab-badge">Lab</span></div>
-            <p class="evidence-subtitle">本地命令、文件变更与原始回执</p>
-            <div class="console-tabs" role="tablist" aria-label="证据类型"><button id="tab-events" role="tab" aria-selected="true" aria-controls="events-panel" type="button">阶段记录 <span id="event-count">0</span></button><button id="tab-files" role="tab" aria-selected="false" aria-controls="files-panel" type="button">证据文件 <span id="file-count">0</span></button></div>
-            <div class="evidence-filter"><label for="evidence-action">定位步骤</label><select id="evidence-action"><option value="">全部步骤</option></select></div>
-            <div id="events-panel" role="tabpanel" aria-labelledby="tab-events"><div id="event-list" class="event-list"><p class="empty">执行后，阶段节点会与这里的命令和文件变更联动。</p></div></div>
-            <div id="files-panel" role="tabpanel" aria-labelledby="tab-files" hidden><div id="file-list"></div><section id="file-preview" hidden><div class="preview-heading"><h3 id="file-title"></h3><button id="close-preview" class="text-button" type="button">收起</button></div><pre id="file-content" tabindex="0"></pre></section></div>
-            <div class="console-footer"><span>EXECUTION MODE</span><strong class="mono">lab</strong></div>
-          </aside>
-        </div>
-        <footer class="history-bar"><div><label for="history-select">实验历史</label><select id="history-select"><option value="">暂无执行记录</option></select></div><a data-testid="export-run" id="export-run" class="button secondary" aria-disabled="true" download="forgerail-run.json">↓ 导出本次证据</a></footer>
-        <p class="boundary" id="boundary">Lab 使用本地文件、Git 与 Python 进程；不执行 Unity 或真实平台 SDK。</p>
-      </main>
-    </div>
-  </div>
-</body>
-</html>
+<a class="skip-link" href="#workspace">跳至实验工作区</a>
+<div class="app" data-testid="workbench" data-phase="" data-run-id="">
+<aside class="sidebar" aria-label="实验场景">
+<a class="brand" href="/" aria-label="ForgeRail 工作台"><span class="brand-mark">F<span>R</span></span><span>FORGERAIL<small>GAME BUILD ENGINEERING</small></span></a>
+<div class="sidebar-heading"><span>16 个事故现场</span><span id="case-count" class="mono">16 CASES</span></div>
+<label class="search-label"><span class="sr-only">搜索场景</span><input data-testid="case-search" id="case-search" type="search" placeholder="搜索场景、机制或角色…" autocomplete="off"></label>
+<label class="role-label"><span>学习角色</span><select aria-label="角色筛选" id="role-filter"><option value="">全部角色</option><option>程序</option><option>美术</option><option>QA</option><option>构建工程师</option></select></label>
+<nav id="case-list" aria-label="场景目录"></nav>
+<div class="sidebar-footer"><span class="live-dot"></span> 本机执行 · 独立实验空间 <span class="badge">Lab</span></div>
+</aside>
+<div class="main-shell">
+<header class="topbar"><span>事故演练 <span class="slash">/</span> <span id="breadcrumb">构建工程</span></span><span class="topbar-mode">文件 · 进程 · 可核对的结果</span></header>
+<main id="workspace" tabindex="-1">
+<div class="error-banner" id="error-banner" role="alert" hidden><span id="error-text"></span><button id="retry" class="text-button" type="button">重试连接</button></div>
+<section class="case-intro" aria-labelledby="case-title">
+<div class="eyebrow" id="case-eyebrow">GAME BUILD ENGINEERING</div>
+<div class="title-row"><h1 id="case-title">游戏构建工程实验台</h1><span class="badge lab-badge">Lab</span></div>
+<p id="case-description" class="case-description"></p>
+<div class="impact-line"><span>为什么要管</span><p id="case-impact"></p></div>
+</section>
+<section class="control-bar" aria-label="实验控制">
+<label class="variant-label">事故类型<select data-testid="fault-variant" id="fault-variant"></select></label>
+<div class="control-actions"><button data-testid="new-run" id="new-run" class="button secondary" type="button">新建实验</button><button data-testid="run-all" id="run-all" class="button primary" type="button">▶ 完整演练</button></div>
+</section>
+<section id="incident" class="panel incident" data-testid="incident" aria-label="事故与处理结果"></section>
+<section class="panel workflow-panel" aria-labelledby="workflow-title">
+<div class="section-heading"><div><span class="eyebrow">HANDS ON</span><h2 id="workflow-title">亲手走一遍处理过程</h2></div><span id="workflow-count" class="mono muted">0 / 6</span></div>
+<div class="run-state"><span class="status-dot" id="status-dot"></span><strong data-testid="run-status" id="run-status" aria-live="polite"></strong><span id="run-short-id" class="mono muted"></span><button data-testid="cancel-run" id="cancel-run" class="text-button danger" disabled type="button">停止执行</button></div>
+<ol class="steps" id="steps"></ol><p class="workflow-note" id="workflow-note"></p>
+</section>
+<details id="audit" class="panel audit">
+<summary>查看原始证据 <span>命令、文件差异、退出码与耗时</span></summary>
+<div class="audit-grid">
+<section class="evidence-column" data-testid="evidence-panel" aria-labelledby="evidence-title">
+<div class="evidence-header"><h2 id="evidence-title">执行记录</h2><span class="badge">Lab</span></div>
+<div class="evidence-filter"><label for="evidence-action">定位步骤</label><select id="evidence-action"><option value="">全部步骤</option></select></div>
+<div class="console-tabs" role="tablist" aria-label="证据类型"><button id="tab-events" role="tab" aria-selected="true" aria-controls="events-panel" type="button">阶段记录 <span id="event-count">0</span></button><button id="tab-files" role="tab" aria-selected="false" aria-controls="files-panel" type="button">证据文件 <span id="file-count">0</span></button></div>
+<div id="events-panel" role="tabpanel" aria-labelledby="tab-events"><div id="event-list" class="event-list"></div></div>
+<div id="files-panel" role="tabpanel" aria-labelledby="tab-files" hidden><div id="file-list"></div><section id="file-preview" hidden><div class="preview-heading"><h3 id="file-title"></h3><button id="close-preview" class="text-button" type="button">收起</button></div><pre id="file-content" tabindex="0"></pre></section></div>
+</section>
+<section class="timeline-panel"><div class="section-heading"><h2>各步骤实际耗时</h2></div><div id="timeline"></div></section>
+</div>
+</details>
+<details id="trust" class="panel trust" data-testid="trust">
+<summary id="trust-summary">凭什么信这些结果？ <span id="evaluation-headline">评测口径与证明边界</span><small class="trust-limit">维护者自编回归集 · 同源评测 · 未盲测 · 未人工复核</small></summary>
+<div id="trust-content"></div>
+</details>
+<footer class="history-bar"><div><label for="history-select">实验历史</label><select id="history-select"></select></div><a data-testid="export-run" id="export-run" class="button secondary" aria-disabled="true" download="forgerail-run.json">↓ 导出本次证据</a></footer>
+<p class="boundary" id="boundary"></p>
+</main></div></div></body></html>

@@ -2,6 +2,7 @@
   "name": "forgerail-browser-acceptance",
   "private": true,
   "scripts": {
+    "test:unit": "node --test tests/incident.test.mjs",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui"
   },

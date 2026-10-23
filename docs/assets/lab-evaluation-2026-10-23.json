@@ -1,0 +1,358 @@
+{
+  "schema": "forgerail-regression-v1",
+  "batch_id": "20261023T100845Z-a35dcf98",
+  "started_at": "2026-10-23T10:08:45.116205+00:00",
+  "finished_at": "2026-10-23T10:11:57.634226+00:00",
+  "execution_mode": "lab",
+  "corpus": "authored-41-v1",
+  "source_sha256": "ba18ab063b516631fed366b38ae1356f841b282e6dd3b441ace8b37ce6908e5f",
+  "git_head": "d1536ca725b99387ae61545573807bfe68b1bc83",
+  "dirty": true,
+  "source_stable": true,
+  "exit_code": 0,
+  "environment": {
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.15"
+  },
+  "junit_sha256": "79f7b4d9385cf276dc89869fc8ab054c502f149257137ffd6122572796ee692c",
+  "command": "python -m pytest tests/test_lab_scenarios.py::test_every_variant_closes_real_loop -q --junitxml=results.xml",
+  "summary": {
+    "total": 41,
+    "rate": 1.0,
+    "rows": [
+      {
+        "case_id": "01",
+        "variant": "import",
+        "label": "导入策略错误",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.446
+      },
+      {
+        "case_id": "01",
+        "variant": "naming",
+        "label": "非法资源命名",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.402
+      },
+      {
+        "case_id": "01",
+        "variant": "budget",
+        "label": "资源超预算",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.31
+      },
+      {
+        "case_id": "02",
+        "variant": "duplicate_guid",
+        "label": "GUID 重复",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.311
+      },
+      {
+        "case_id": "02",
+        "variant": "missing_reference",
+        "label": "引用缺失",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.388
+      },
+      {
+        "case_id": "02",
+        "variant": "broken_prefab",
+        "label": "Prefab 描述损坏",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.538
+      },
+      {
+        "case_id": "03",
+        "variant": "text_conflict",
+        "label": "文本冲突",
+        "status": "passed",
+        "reason": "",
+        "seconds": 3.382
+      },
+      {
+        "case_id": "03",
+        "variant": "regression",
+        "label": "冲突合并回归",
+        "status": "passed",
+        "reason": "",
+        "seconds": 3.475
+      },
+      {
+        "case_id": "04",
+        "variant": "lock",
+        "label": "共享目录锁冲突",
+        "status": "passed",
+        "reason": "",
+        "seconds": 8.458
+      },
+      {
+        "case_id": "04",
+        "variant": "identity",
+        "label": "版本身份混淆",
+        "status": "passed",
+        "reason": "",
+        "seconds": 7.751
+      },
+      {
+        "case_id": "05",
+        "variant": "compile",
+        "label": "源码编译失败",
+        "status": "passed",
+        "reason": "",
+        "seconds": 11.202
+      },
+      {
+        "case_id": "05",
+        "variant": "test",
+        "label": "行为测试失败",
+        "status": "passed",
+        "reason": "",
+        "seconds": 9.755
+      },
+      {
+        "case_id": "05",
+        "variant": "release_gate",
+        "label": "Release 缺少门禁",
+        "status": "passed",
+        "reason": "",
+        "seconds": 9.695
+      },
+      {
+        "case_id": "06",
+        "variant": "missing_asset",
+        "label": "资源加载失败",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.657
+      },
+      {
+        "case_id": "06",
+        "variant": "runtime_config",
+        "label": "启动配置错误",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.344
+      },
+      {
+        "case_id": "06",
+        "variant": "crash",
+        "label": "启动代码异常",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.657
+      },
+      {
+        "case_id": "07",
+        "variant": "dependency",
+        "label": "遗漏依赖",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.409
+      },
+      {
+        "case_id": "07",
+        "variant": "corruption",
+        "label": "缓存损坏",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.52
+      },
+      {
+        "case_id": "07",
+        "variant": "repeat",
+        "label": "强制重复导入",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.383
+      },
+      {
+        "case_id": "08",
+        "variant": "serial",
+        "label": "所有阶段串行",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.567
+      },
+      {
+        "case_id": "08",
+        "variant": "dependency",
+        "label": "遗漏打包依赖",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.15
+      },
+      {
+        "case_id": "09",
+        "variant": "capability",
+        "label": "没有合适节点",
+        "status": "passed",
+        "reason": "",
+        "seconds": 8.716
+      },
+      {
+        "case_id": "09",
+        "variant": "busy",
+        "label": "节点槽位已满",
+        "status": "passed",
+        "reason": "",
+        "seconds": 11.346
+      },
+      {
+        "case_id": "09",
+        "variant": "lease",
+        "label": "认领后掉线",
+        "status": "passed",
+        "reason": "",
+        "seconds": 11.478
+      },
+      {
+        "case_id": "10",
+        "variant": "timeout",
+        "label": "进程树超时",
+        "status": "passed",
+        "reason": "",
+        "seconds": 3.688
+      },
+      {
+        "case_id": "10",
+        "variant": "cancel",
+        "label": "任务取消",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.88
+      },
+      {
+        "case_id": "11",
+        "variant": "editor",
+        "label": "Editor 版本策略",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.29
+      },
+      {
+        "case_id": "11",
+        "variant": "sdk",
+        "label": "SDK 描述缺失",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.283
+      },
+      {
+        "case_id": "11",
+        "variant": "license_budget",
+        "label": "授权与磁盘预算",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.544
+      },
+      {
+        "case_id": "12",
+        "variant": "dns",
+        "label": "注入 DNS 策略故障",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.063
+      },
+      {
+        "case_id": "12",
+        "variant": "tcp",
+        "label": "TCP 拒绝连接",
+        "status": "passed",
+        "reason": "",
+        "seconds": 2.381
+      },
+      {
+        "case_id": "12",
+        "variant": "http",
+        "label": "HTTP 权限响应错误",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.034
+      },
+      {
+        "case_id": "13",
+        "variant": "zip",
+        "label": "ZIP 字节篡改",
+        "status": "passed",
+        "reason": "",
+        "seconds": 4.291
+      },
+      {
+        "case_id": "13",
+        "variant": "manifest",
+        "label": "manifest 文件摘要错误",
+        "status": "passed",
+        "reason": "",
+        "seconds": 4.822
+      },
+      {
+        "case_id": "13",
+        "variant": "identity",
+        "label": "拿错构建版本",
+        "status": "passed",
+        "reason": "",
+        "seconds": 4.575
+      },
+      {
+        "case_id": "14",
+        "variant": "gate",
+        "label": "缺少发布观察门禁",
+        "status": "passed",
+        "reason": "",
+        "seconds": 20.693
+      },
+      {
+        "case_id": "14",
+        "variant": "canary",
+        "label": "灰度观察异常",
+        "status": "passed",
+        "reason": "",
+        "seconds": 23.294
+      },
+      {
+        "case_id": "15",
+        "variant": "full",
+        "label": "少量变更却全量下载",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.743
+      },
+      {
+        "case_id": "15",
+        "variant": "closure",
+        "label": "遗漏依赖闭包",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.998
+      },
+      {
+        "case_id": "16",
+        "variant": "sdk",
+        "label": "矩阵 SDK 描述缺失",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.685
+      },
+      {
+        "case_id": "16",
+        "variant": "routing",
+        "label": "平台路由不匹配",
+        "status": "passed",
+        "reason": "",
+        "seconds": 1.651
+      }
+    ],
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "missing": 0,
+    "invalid": 0
+  }
+}

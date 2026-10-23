@@ -71,6 +71,9 @@ def execute(ctx):
     policy = ctx.read('asset-policy.json')
     report = check_assets(ctx.repo, max_asset_bytes=policy['max_bytes'])
     issues = list(report['issues'])
+    for issue in issues:
+        if issue['rule_id'] == 'asset_too_large':
+            issue.update(expected=policy['max_bytes'], actual=(ctx.repo/issue['path']).stat().st_size, unit='bytes')
     reverse, guid_paths = {}, {}
     for meta in sorted((ctx.repo/'Assets').glob('*.meta')):
         match = re.search(r'^guid:\s*([a-f0-9]{32})', meta.read_text(), re.M)

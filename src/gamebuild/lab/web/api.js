@@ -16,6 +16,7 @@ export async function request(path, options = {}) {
 }
 
 export const api = {
+  evaluation: () => request('/evaluation'),
   cases: () => request('/cases'),
   history: () => request('/runs'),
   create: (case_id, variant) => request('/runs', { method: 'POST', body: JSON.stringify({ case_id, variant }) }),

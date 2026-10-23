@@ -4,11 +4,13 @@
 
 ## 如何学习一个案例
 
+主界面是一张事故处理单：操作对象 → 实际注入 → 哪条规则失败 → 修复范围 → 新的复验观测。先读这条因果链，再按需展开原始记录。案例 01 明确列出 compression/readable 两项违规，不再用单个总断言的“0/1”代替具体问题。
+
 1. 在左栏选择角色、案例和故障变体，点击“新建实验”。每个实验有独立文件、Git 仓库、输出和状态。
 2. 逐步准备、制造问题、执行。执行步骤必须看到该变体对应的失败证据，才能推进；其他意外错误会保持失败，不冒充复现成功。
 3. 点击诊断，对照失败断言、实际日志和文件差异。阶段记录可以定位到证据步骤。
 4. 点击修复，查看输入变更；点击复验，对照修复前后断言、实际摘要与进程回执。完整演练会依次执行同一条链路。
-5. 在证据文件页预览或下载日志、差异、JSON、ZIP；导出本次运行。刷新与历史选择可以恢复记录。
+5. 点击“查看故障差异 / 查看修复差异 / 查看复验原始记录”定位证据；也可以展开“查看原始证据”，在文件页预览或下载日志、JSON、ZIP。刷新与历史选择可以恢复记录。
 
 | 案例 | 覆盖的问题与验证 |
 | --- | --- |
@@ -44,11 +46,13 @@
 ```powershell
 .venv/Scripts/python.exe -m pytest -q
 npm ci
+npm run test:unit
 npm run test:e2e
+.venv/Scripts/python.exe scripts/evaluate_lab.py --root runtime/interactive-lab
 ```
 
 Windows 浏览器验收使用本机 Edge；Linux 使用 Chromium，先运行 `npx playwright install --with-deps chromium`。浏览器测试启动独立端口 `18767` 和独立运行目录，不依赖正在使用的工作台，不 mock Lab API。
 
 Python 测试覆盖全部登记故障变体；浏览器测试覆盖 16 个默认案例完整六步闭环，以及下载、刷新、筛选、键盘、窄屏、取消等交互。CI 同时配置 Windows/Linux Python 回归和 Linux Chromium 验收；本机通过与远端 CI 状态应分别查看。
 
-详见 [实现复盘](interactive-lab-retrospective.md)、[设计](superpowers/specs/2026-10-23-interactive-gamebuild-lab-design.md) 和 [代码导航](code-map.md)。
+详见 [评测口径、面试回答与本次取舍](evidence-and-evaluation.md)、[实现复盘](interactive-lab-retrospective.md)、[设计](superpowers/specs/2026-10-23-interactive-gamebuild-lab-design.md) 和 [代码导航](code-map.md)。

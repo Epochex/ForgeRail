@@ -18,7 +18,8 @@ function eventNode(event) {
   node.dataset.seq = event.seq;
   const head = el('div', 'event-heading');
   head.append(el('span', 'event-stage', event.stage), el('span', 'mono event-time', clock(event.at)));
-  node.append(head, el('p', 'event-message', event.message));
+  node.append(head);
+  if (event.message !== event.stage) node.append(el('p', 'event-message', event.message));
   const data = event.data || {};
   if (data.duration_ms !== undefined || data.exit_code !== undefined) {
     const meta = el('div', 'event-meta mono');
@@ -32,20 +33,28 @@ function eventNode(event) {
     node.append(block);
   }
   if (data.stdout !== undefined) node.append(detail('原始命令输出 / stdout', data.stdout || '（无标准输出）', 'event-detail'));
-  const extra = Object.fromEntries(Object.entries(data).filter(([key]) => !['stdout', 'diff', 'duration_ms', 'exit_code'].includes(key)));
+  const extra = Object.fromEntries(Object.entries(data).filter(([key]) => !['stdout', 'diff', 'duration_ms', 'exit_code', 'path'].includes(key)));
   if (Object.keys(extra).length) node.append(detail('结构化执行记录', formatValue(extra), 'event-detail'));
   return node;
 }
 
 export function renderEvidence() {
-  const run = state.run;
+  const run = state.run?.variant === state.variant ? state.run : null;
   const actions = run?.actions || [];
   setOptions($('evidence-action'), [['', '全部步骤'], ...actions.map(a => [a.id, `${name(a.kind)} · ${a.state}`])], state.actionId);
   $('tab-events').setAttribute('aria-selected', String(state.tab === 'events'));
   $('tab-files').setAttribute('aria-selected', String(state.tab === 'files'));
   $('events-panel').hidden = state.tab !== 'events';
   $('files-panel').hidden = state.tab !== 'files';
-  const events = (run?.events || []).filter(e => !state.actionId || e.action_id === state.actionId);
+  const rawEvents = (run?.events || []).filter(e => !state.actionId || e.action_id === state.actionId);
+  // Collapse identical wrapper/inner lifecycle messages; original export remains complete.
+  const seen = new Set();
+  const events = rawEvents.filter(event => {
+    if (event.message !== event.stage) return true;
+    const key = `${event.action_id}:${event.stage}:${event.status}`;
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  });
   const files = (run?.evidence || []).filter(e => !state.actionId || e.action_id === state.actionId);
   $('event-count').textContent = events.length;
   $('file-count').textContent = files.length;

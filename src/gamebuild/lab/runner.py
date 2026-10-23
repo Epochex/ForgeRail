@@ -73,12 +73,19 @@ def perform(root, action_id, parent_pid=None):
         with context.stage({'prepare': '准备实验', 'inject': '制造问题', 'execute': '执行故障流程',
                             'diagnose': '定位根因', 'repair': '应用修复', 'verify': '重新验证'}[kind]):
             if kind == 'diagnose':
-                from .catalog import CASES
-                case = next(c for c in CASES if c['id'] == run['case_id'])
-                previous = next(a['result'] for a in reversed(run['actions']) if a['kind'] == 'execute' and a['result'])
-                result = {'summary': case['diagnosis'], 'checks': [c for c in previous['checks'] if not c['passed']],
+                from .walkthrough import GUIDES
+                guide = GUIDES[run['case_id']]
+                source = next(a for a in reversed(run['actions']) if a['kind'] == 'execute' and a['result'])
+                previous = source['result']
+                failed = [c for c in previous['checks'] if not c['passed']]
+                diagnosis = dict(method='rule-based', source_action_id=source['id'],
+                                 observations=previous.get('facts', {}).get('issues', failed),
+                                 fault_confirmed=previous.get('fault_signature', {}).get('observed', False),
+                                 intervention=guide['mutations'][run['variant']], repair_scope=guide['repair'])
+                summary = f"{guide['gate']}：{len(diagnosis['observations'])} 项异常与注入记录核对；按规则定位，非 AI 自主推断。"
+                result = {'summary': summary, 'checks': failed, 'diagnosis': diagnosis,
                           'facts': previous.get('facts', {}), 'execution_mode': 'lab'}
-                context.record('诊断证据', 'INFO', case['diagnosis'], checks=result['checks'])
+                context.record('诊断证据', 'INFO', summary, **diagnosis)
             elif kind in ('execute', 'verify'):
                 result = scenarios.execute(context)
                 if not result.get('checks'): raise ValueError('scenario has no observed assertions')

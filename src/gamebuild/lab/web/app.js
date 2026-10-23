@@ -3,6 +3,7 @@ import { $, } from './dom.js';
 import { state, update, subscribe, currentCase, busy } from './model.js';
 import { buildSteps, render } from './view.js';
 import { closePreview } from './evidence.js';
+import { renderTrust } from './incident.js';
 
 let selection = 0;
 let monitor = 0;
@@ -159,7 +160,7 @@ async function cancel() {
   } catch (error) { if (epoch === selection) update({ error: error.message, cancelRequested: false }); }
 }
 
-function selectAction(id) { update({ actionId: id, tab: 'events' }); }
+function selectAction(id) { update({ actionId: id, tab: 'events' }); $('audit').open = true; }
 
 async function retry() {
   const epoch = selection;
@@ -205,6 +206,8 @@ window.addEventListener('hashchange', () => {
 });
 
 async function init() {
+  renderTrust(null);
+  api.evaluation().then(renderTrust).catch(error => renderTrust(null, error.message));
   render(chooseCase, selectAction);
   try {
     const cases = await api.cases(); update({ cases });

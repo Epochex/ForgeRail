@@ -96,6 +96,16 @@ def test_catalog_is_complete_and_explains_boundaries():
         assert len({v['id'] for v in case['variants']}) == len(case['variants'])
 
 
+def test_resource_budget_reports_measured_bytes_not_only_a_generic_error(tmp_path):
+    ctx=Context(tmp_path,'01','budget','prepare')
+    prepare(ctx); inject(ctx)
+    report=execute(ctx)
+    issue=next(i for i in report['facts']['issues'] if i['rule_id']=='asset_too_large')
+    assert issue['expected']==256
+    assert issue['actual']==1024
+    assert issue['unit']=='bytes'
+
+
 @pytest.mark.parametrize('case_id,variant', [('03','text_conflict'),('04','lock')])
 def test_git_preparation_can_be_retried(tmp_path,case_id,variant):
     ctx=Context(tmp_path,case_id,variant,'prepare')

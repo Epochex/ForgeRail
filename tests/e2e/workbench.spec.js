@@ -10,6 +10,57 @@ test.beforeEach(async ({ page }) => {
   await expect(page.getByTestId('case-01')).toBeVisible();
 });
 
+test('novice can explain the actual fault, repair scope and evidence limits', async ({page}) => {
+  await page.getByTestId('case-01').click();
+  await page.getByTestId('fault-variant').selectOption('import');
+  await page.getByTestId('run-all').click();
+  await expect(page.getByTestId('workbench')).toHaveAttribute('data-phase','verified');
+  const story = page.getByTestId('incident');
+  await expect(story).toContainText('Assets/hero_texture.txt.meta');
+  await expect(story).toContainText('compression');
+  await expect(story).toContainText('readable');
+  await expect(story).toContainText('none');
+  await expect(story).toContainText('compressed');
+  await expect(story).toContainText('2 项违规 → 0 项违规');
+  await expect(story).toContainText('恢复范围大于两个字段');
+  await expect(page.locator('#audit')).not.toHaveAttribute('open','');
+  fs.mkdirSync('output/playwright', {recursive:true});
+  await page.screenshot({path:'output/playwright/incident-overview.png',fullPage:false});
+  await page.getByRole('button',{name:'查看修复差异'}).click();
+  await expect(page.locator('#audit')).toHaveAttribute('open','');
+  await expect(page.locator('#evidence-action option:checked')).toContainText('应用修复');
+  await page.getByTestId('fault-variant').selectOption('budget');
+  await expect(story).toContainText('1024');
+  await expect(story).not.toContainText('2 项违规 → 0 项违规');
+  await page.locator('#trust-summary').click();
+  await expect(page.getByTestId('trust')).toContainText('同源');
+  await expect(page.getByTestId('trust')).toContainText('人工复核尚未开展');
+  await expect(page.getByTestId('trust')).toContainText('Agent');
+});
+
+test('a failed recheck displays actual post-repair values and new violations', async ({page}) => {
+  await page.getByTestId('case-01').click();
+  await page.getByTestId('fault-variant').selectOption('import');
+  await page.getByTestId('new-run').click();
+  for (let i=0;i<5;i++) {
+    await page.getByTestId(`step-${steps[i]}`).click();
+    await expect(page.getByTestId('workbench')).toHaveAttribute('data-phase',phases[i]);
+  }
+  const rid=await page.getByTestId('workbench').getAttribute('data-run-id');
+  const root=JSON.parse(fs.readFileSync('runtime/browser-test-root.json','utf8'));
+  const fixture=path.join(root,'runs',rid,'fixture','Assets');
+  const meta=path.join(fixture,'hero_texture.txt.meta');
+  fs.writeFileSync(meta,fs.readFileSync(meta,'utf8').replace('compressed','none'));
+  fs.writeFileSync(path.join(fixture,'hero_texture.txt'),'x'.repeat(1024));
+  await page.getByTestId('step-verify').click();
+  await expect(page.getByTestId('run-status')).toContainText('执行异常');
+  await expect(page.getByTestId('incident')).toContainText('复验仍有失败');
+  const compression=page.locator('.outcome-table tbody tr').filter({hasText:'compression'});
+  await expect(compression.locator('td').last()).toHaveText('none');
+  await expect(page.getByTestId('incident')).toContainText('1024');
+  await expect(page.getByTestId('incident')).not.toContainText('尚未复验');
+});
+
 for (let i = 1; i <= 16; i++) {
   const id = String(i).padStart(2, '0');
   test(`case ${id}: actual fault → diagnosis → repair → verification`, async ({ page }) => {
@@ -58,6 +109,7 @@ test('complete demo, evidence download, export and narrow layout', async ({ page
   const run = await (await page.request.get(`/lab/api/runs/${rid}`)).json();
   const ev = run.evidence[0];
   expect((await page.request.get(`/lab/api/runs/${rid}/evidence/${ev.id}`)).ok()).toBe(true);
+  await page.locator('#audit > summary').click();
   await page.getByRole('tab', {name:/证据文件/}).click();
   await page.locator('.file-open').first().click();
   await expect(page.locator('#file-content')).not.toContainText('正在读取实际文件');

@@ -32,6 +32,11 @@ def test_auth_origin_order_and_real_action_roundtrip(tmp_path):
             assert state['actions'][-1]['state'] == 'SUCCEEDED', state['actions'][-1]
         assert state['phase'] == 'verified'
         assert state['actions'][2]['result']['passed'] is False
+        diagnosis = state['actions'][3]['result']['diagnosis']
+        assert diagnosis['source_action_id'] == state['actions'][2]['id']
+        assert diagnosis['method'] == 'rule-based'
+        assert len(diagnosis['observations']) == 2
+        assert diagnosis['observations'][0]['actual'] == 'none'
         assert state['actions'][-1]['result']['passed'] is True
         assert state['events'] and state['evidence']
         e = state['evidence'][0]
@@ -87,3 +92,21 @@ def test_browser_harness_initializes_an_empty_checkout_runtime(tmp_path):
     assert root.is_dir()
     pointer=tmp_path/'fresh-runtime/browser-test-root.json'
     assert Path(json.loads(pointer.read_text(encoding='utf-8')))==root.resolve()
+
+
+def test_evaluation_absence_staleness_and_junit_scope(tmp_path):
+    import json
+    with TestClient(create_lab_app(tmp_path,'token'),base_url='http://127.0.0.1') as c:
+        assert c.get('/lab/api/evaluation').status_code == 401
+        c.get('/?access=token',follow_redirects=False)
+        assert c.get('/lab/api/evaluation').json() == {'available':False}
+        batch='20261023T100000Z-abcdef01'
+        folder=tmp_path/'evaluations'/batch
+        folder.mkdir(parents=True)
+        (folder/'report.json').write_text(json.dumps({'source_sha256':'old-source','batch_id':batch}))
+        (folder/'results.xml').write_text('<testsuite/>')
+        report=c.get('/lab/api/evaluation').json()
+        assert report['available'] and not report['current_source']
+        assert c.get(f'/lab/api/evaluation/{batch}/junit').text == '<testsuite/>'
+        assert c.get('/lab/api/evaluation/not-a-batch/junit').status_code==404
+        assert c.get('/lab/api/evaluation/export').json()['batch_id']==batch

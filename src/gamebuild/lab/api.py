@@ -96,7 +96,34 @@ def create_lab_app(root: Path, token: str | None = None):
     @app.get('/lab/api/cases')
     def cases():
         from .catalog import CASES
-        return CASES
+        from .walkthrough import GUIDES
+        return [{**case, 'guide': GUIDES[case['id']]} for case in CASES]
+
+    @app.get('/lab/api/evaluation')
+    def evaluation():
+        from .evaluation import source_fingerprint
+        reports = sorted((root/'evaluations').glob('*/report.json'), reverse=True)
+        if not reports: return {'available': False}
+        result = json.loads(reports[0].read_text(encoding='utf-8'))
+        repo = Path(__file__).resolve().parents[3]
+        current = (repo/'tests/test_lab_scenarios.py').exists()
+        result['current_source'] = current and result['source_sha256'] == source_fingerprint(repo)
+        return scrub({'available': True, 'batch_count': len(reports), **result})
+
+    @app.get('/lab/api/evaluation/export')
+    def export_evaluation():
+        return Response(json.dumps(evaluation(), ensure_ascii=False, indent=2), media_type='application/json',
+                        headers={'Content-Disposition':'attachment; filename="forgerail-evaluation.json"'})
+
+    @app.get('/lab/api/evaluation/{batch_id}/junit')
+    def evaluation_junit(batch_id: str):
+        import re
+        if not re.fullmatch(r'[0-9]{8}T[0-9]{6}Z-[a-f0-9]{8}', batch_id):
+            raise HTTPException(404, 'unknown evaluation batch')
+        from .context import confined
+        path = confined(root, f'evaluations/{batch_id}/results.xml')
+        if not path.is_file(): raise HTTPException(404, 'missing JUnit')
+        return FileResponse(path, media_type='application/xml', filename=f'{batch_id}-results.xml')
 
     @app.post('/lab/api/runs', status_code=201)
     def new_run(body: NewRun):
