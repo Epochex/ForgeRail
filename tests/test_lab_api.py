@@ -75,3 +75,15 @@ def test_completed_action_replay_and_export_never_expose_structured_credentials(
             response=c.get(url)
             assert 'internal-worker-token' not in response.text
             assert '[lab]' in response.text
+
+
+def test_browser_harness_initializes_an_empty_checkout_runtime(tmp_path):
+    import runpy
+    import json
+    from pathlib import Path
+    script=Path(__file__).parent/'e2e/serve.py'
+    prepare=runpy.run_path(str(script))['prepare_root']
+    root=prepare(tmp_path/'fresh-runtime')
+    assert root.is_dir()
+    pointer=tmp_path/'fresh-runtime/browser-test-root.json'
+    assert Path(json.loads(pointer.read_text(encoding='utf-8')))==root.resolve()
