@@ -1,7 +1,7 @@
 # ForgeRail · Game Build Engineering Lab 交互实验台设计
 
 - 日期：2026-10-23
-- 状态：待用户审阅；尚未开始产品代码实现
+- 状态：用户已批准并要求连续完成；实现及本机验收已完成，见 [验收记录](../../interactive-lab-validation.md)
 - 基线：公开仓库 `Epochex/ForgeRail`，`fec480888e3747b855731aa5af5655ea9cfdb59c`
 
 ## 1. 目标与用户要求

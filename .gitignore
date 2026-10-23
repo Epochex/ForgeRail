@@ -32,3 +32,8 @@ tests/**/obj/
 reports/downloads/
 
 *.log
+node_modules/
+build/
+playwright-report/
+test-results/
+output/playwright/

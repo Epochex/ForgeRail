@@ -49,12 +49,12 @@ class NodeLock:
         self.file.close()
 
 
-def work_once(url, token, worker, root: Path, projects: dict, unity_path=None, lease_seconds=30):
+def work_once(url, token, worker, root: Path, projects: dict, unity_path=None, lease_seconds=30, lab_builder=None, slots=1):
     with NodeLock(root):
-        return _work_once(url, token, worker, root, projects, unity_path, lease_seconds)
+        return _work_once(url, token, worker, root, projects, unity_path, lease_seconds, lab_builder, slots)
 
 
-def _work_once(url, token, worker, root: Path, projects: dict, unity_path=None, lease_seconds=30):
+def _work_once(url, token, worker, root: Path, projects: dict, unity_path=None, lease_seconds=30, lab_builder=None, slots=1):
     root = Path(root).resolve(); root.mkdir(parents=True, exist_ok=True)
     headers = {"Authorization": "Bearer " + token}
     caps = ["lab"] + ['project:'+name for name in projects]
@@ -70,7 +70,7 @@ def _work_once(url, token, worker, root: Path, projects: dict, unity_path=None, 
     with httpx.Client(base_url=url, headers=headers, timeout=15, trust_env=False) as client:
         def post(path, body):
             r = client.post(path, json=body); r.raise_for_status(); return r.json()
-        post("/v1/workers/heartbeat", {"worker": worker, "capabilities": caps})
+        post("/v1/workers/heartbeat", {"worker": worker, "capabilities": caps, "slots":slots})
         job = post("/v1/workers/claim", {"worker": worker, "lease_seconds": lease_seconds})
         if not job: return None
         jid = job["job_id"]; owner = {"worker": worker, "token": job["token"]}
@@ -80,7 +80,7 @@ def _work_once(url, token, worker, root: Path, projects: dict, unity_path=None, 
             while not done.wait(max(0.2, lease_seconds / 3)):
                 try:
                     post("/v1/attempts/" + jid + "/renew", {**owner, "seconds": lease_seconds})
-                    post("/v1/workers/heartbeat", {"worker": worker, "capabilities": caps})
+                    post("/v1/workers/heartbeat", {"worker": worker, "capabilities": caps, "slots":slots})
                 except Exception:
                     cancelled.set(); return
 
@@ -92,7 +92,9 @@ def _work_once(url, token, worker, root: Path, projects: dict, unity_path=None, 
         try:
             work = SourceManager(root / "source", projects).prepare(request)
             post("/v1/attempts/" + jid + "/report", {**owner, "state": "building"})
-            if request["adapter"] == "lab":
+            if request["adapter"] == "lab" and lab_builder is not None:
+                lab_builder(work, attempt, payload, request, identity, cancelled)
+            elif request["adapter"] == "lab":
                 # A real child reads the checked-out fixture. This is explicitly not a game engine build.
                 script = "import pathlib,json,sys,time; p=pathlib.Path(sys.argv[1]); x=json.loads((p/'config.json').read_text()); print(json.dumps({'lab_config':x}),flush=True); time.sleep(max(0,min(60,float(x.get('work_seconds',0)))));"
                 result = run_process([sys.executable, "-c", script, str(work)], cwd=work,

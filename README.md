@@ -13,6 +13,16 @@ ForgeRail 将 **Python 控制面、远端执行节点、Unity C# 构建入口和
 
 这是可运行、可注入故障的个人工程项目，适合学习游戏构建工程、走读分布式任务机制和验证流水线设计。真实引擎路径是 **Windows x64 / Unity 6000.3.0f1 / Mono**；Python 演示无需安装 Unity。
 
+新增 **[交互式游戏构建工程实验台](docs/interactive-lab.md)**：一个工作台、16 个案例、41 个故障变体。每例均可准备、注入、执行、诊断、修复和复验，查看实际命令、文件差异、阶段耗时、前后断言与可下载证据。此入口不启动 Unity，成功显示“构建成功”及相邻 **Lab** 标识。
+
+安装下方 Python 依赖后，Windows 一条命令打开工作台：
+
+```powershell
+./scripts/start-lab.ps1
+```
+
+Linux：`.venv/bin/python -m gamebuild.cli lab --open`。默认端口 `18766`，终端打印带本次启动随机凭据的地址；页面使用 HttpOnly 会话。无需 npm、Docker、Jenkins 或 Editor；npm 仅用于开发者运行浏览器验收。
+
 ## 目录
 
 - [能力与边界](#能力与边界)

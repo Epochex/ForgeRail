@@ -26,6 +26,9 @@ gamebuild = "gamebuild.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"gamebuild.lab" = ["web/*.html", "web/*.css", "web/*.js"]
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]

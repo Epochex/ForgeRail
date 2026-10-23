@@ -126,6 +126,10 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     p = commands.add_parser("serve"); p.add_argument("--root", default="runtime/control"); p.add_argument("--host", default="127.0.0.1"); p.add_argument("--port", type=int, default=18765)
     p = commands.add_parser("demo"); p.add_argument("--root", default="runtime/demo"); p.add_argument("--report")
+    p = commands.add_parser('lab', help='interactive local game build engineering workbench (no Unity)')
+    p.add_argument('--root', default='runtime/interactive-lab')
+    p.add_argument('--port', type=int, default=18766)
+    p.add_argument('--open', action='store_true', help='open the authenticated local workbench')
     p = commands.add_parser("doctor"); p.add_argument("--unity"); p.add_argument("--report")
     p = commands.add_parser("worker"); p.add_argument("--url", required=True); p.add_argument("--root", default="runtime/node"); p.add_argument("--name", default="windows-1"); p.add_argument("--projects", required=True); p.add_argument("--unity"); p.add_argument("--once", action="store_true")
     p = commands.add_parser("submit"); p.add_argument("--url", required=True); p.add_argument("--project", default="demo"); p.add_argument("--repo", required=True); p.add_argument("--adapter", choices=["lab", "unity"], default="lab"); p.add_argument("--target", default="lab"); p.add_argument("--branch"); p.add_argument("--wait", action="store_true"); p.add_argument('--wait-timeout',type=float,default=1200); p.add_argument("--report"); p.add_argument("--token-env", default="GAMEBUILD_TOKEN")
@@ -135,6 +139,19 @@ def main():
     p = commands.add_parser("report"); p.add_argument("--root", default="runtime/control"); p.add_argument("--output", required=True)
     args = parser.parse_args()
     token = os.environ.get(getattr(args, "token_env", "GAMEBUILD_TOKEN"), "")
+    if args.command == 'lab':
+        import uvicorn
+        import webbrowser
+        from .lab.api import create_lab_app
+        if not 1024 <= args.port <= 65535: parser.error('lab port must be between 1024 and 65535')
+        launch = secrets.token_urlsafe(32)
+        url = f'http://127.0.0.1:{args.port}/?access={launch}'
+        print('ForgeRail Engineering Lab · local execution · no Unity', flush=True)
+        print('Open: '+url, flush=True)
+        if args.open:
+            threading.Timer(1.2, lambda: webbrowser.open(url)).start()
+        uvicorn.run(create_lab_app(Path(args.root), launch), host='127.0.0.1', port=args.port, access_log=False, log_level='warning')
+        return
     if args.command == "serve":
         import uvicorn
         from .api import create_app
