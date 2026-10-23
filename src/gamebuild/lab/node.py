@@ -11,6 +11,12 @@ import httpx
 import uvicorn
 
 
+def publish_ready(path, value):
+    pending=path.with_suffix('.pending')
+    pending.write_text(json.dumps(value),encoding='utf-8')
+    pending.replace(path)
+
+
 def main(path):
     cfg = json.loads(Path(path).read_text(encoding='utf-8'))
     output = Path(cfg['output'])
@@ -33,7 +39,7 @@ def main(path):
                 if threading.Event().wait(.05): return
             server.should_exit = True
         threading.Thread(target=stop, daemon=True).start()
-        Path(cfg['ready']).write_text(json.dumps({'pid':os.getpid(),'url':f'http://127.0.0.1:{sock.getsockname()[1]}'}))
+        publish_ready(Path(cfg['ready']),{'pid':os.getpid(),'url':f'http://127.0.0.1:{sock.getsockname()[1]}'})
         try: server.run(sockets=[sock])
         finally: sock.close()
         return

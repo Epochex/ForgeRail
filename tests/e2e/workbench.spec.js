@@ -128,7 +128,8 @@ test('cancel active child process, retain evidence and retry execution', async (
     const output=path.join(root,'runs',rid,'output');
     for(const action of fs.readdirSync(output)) {
       const candidate=path.join(output,action,'process-state');
-      if(fs.existsSync(path.join(candidate,'child.pid'))) { stateFolder=candidate; return true; }
+      const heartbeat=path.join(candidate,'heartbeat.txt');
+      if(fs.existsSync(path.join(candidate,'child.pid')) && fs.existsSync(heartbeat) && fs.statSync(heartbeat).size>0) { stateFolder=candidate; return true; }
     }
     return false;
   },{intervals:[10,20,20]}).toBe(true);

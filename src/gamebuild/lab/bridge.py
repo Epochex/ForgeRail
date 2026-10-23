@@ -33,6 +33,7 @@ def actor(ctx, cfg, name):
 @contextmanager
 def control(ctx):
     ready,stop = ctx.output/'control-ready.json',ctx.output/'control.stop'
+    ready.unlink(missing_ok=True);stop.unlink(missing_ok=True)
     token = secrets.token_urlsafe(32)
     cfg = dict(role='server',token=token,output='',control=str(ctx.output/'http-control'),ready=str(ready),stop=str(stop))
     with ThreadPoolExecutor(max_workers=1) as pool:
